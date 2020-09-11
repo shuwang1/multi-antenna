@@ -1,0 +1,58 @@
+\begin{thebibliography}{1}
+
+\bibitem{Gerlach94}
+D.~Gerlach and A.~Paulraj.
+\newblock Spectrum reuse using transmitting antenna arrays with feedback.
+\newblock In {\em Proc. Int. Conf. Acoust., Speech, Signal Processing}, pages
+  97--100, Adelaide, Australia, April 1994.
+
+\bibitem{Narula98}
+A.~Narula\texttt{,} et~al.
+\newblock Efficient use of side information in multiple-antenna data
+  transmission over fading channels.
+\newblock {\em IEEE J. Select Areas in Communications}, 16(8):1423--1436,
+  October 1998.
+
+\bibitem{Mukka03}
+K.~K. Mukkavilli\texttt{,} A. Sabharwal\texttt{,}~E. Erkip and B.~Aazhang.
+\newblock On beamforming with finite rate feedback in multiple-antenna systems.
+\newblock {\em IEEE Trans Info. Theo.}, 49:2562--2579, October 2003.
+
+\bibitem{PXia04}
+P.~Xia and G.~B. Giannakis.
+\newblock Design and analysis of transmit-beamforming based on limited-rate
+  feedback.
+\newblock In {\em Proc. IEEE VTC}, September 2004.
+
+\bibitem{Roh04}
+J.~C. Roh and B.~D. Rao.
+\newblock Performance analysis of multiple antenna systems with vq-based
+  feedback.
+\newblock In {\em Proc. Asilomar Conference 2004}, Pacific Grove, CA, November
+  2004.
+
+\bibitem{Love02}
+D.~J. Love\texttt{,} R.~W. Heath and T.~Strohmer.
+\newblock Quantized maximal ratio transmission for multiple-input
+  multiple-output wireless systems.
+\newblock In {\em Proc. Asilomar Conf.}, Pacific Grove, CA, Nov. 2002.
+
+\bibitem{Tong04}
+L.~Tong\texttt{,}B.~M. Sadler and M.~Dong.
+\newblock Pilot-assisted wireless transmissions: general model, design
+  criteria, and signal processing.
+\newblock {\em IEEE Signal Processing Mag.}, 21(56):12--25, November 2004.
+
+\bibitem{Coldrey06}
+M.~Coldrey and P.~Bohlin.
+\newblock Training-based mimo syetems: Part i/ii.
+\newblock {\em Technical Report (http://db.s2.chalmers.se/)}, (R032/033), June
+  2006.
+
+\bibitem{Dong02}
+M.~Dong and L.~Tong.
+\newblock Optimal design and placement of pilot symbols for channel estimation.
+\newblock {\em IEEE Trans. on Signal Processing}, 50(12):3055--3069, December
+  2002.
+
+\end{thebibliography}
