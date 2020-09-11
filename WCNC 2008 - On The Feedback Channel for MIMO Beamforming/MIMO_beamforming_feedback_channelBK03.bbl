@@ -1,0 +1,69 @@
+\begin{thebibliography}{10}
+
+\bibitem{Narula98}
+A.~Narula\texttt{,} M. J. Lopez\texttt{,} M.~D. Trott and G.~W. Wornell.
+\newblock Efficient use of side information in multiple-antenna data
+  transmission over fading channels.
+\newblock {\em IEEE J. Select Areas in Communications}, 16(8):1423--1436,
+  October 1998.
+
+\bibitem{Mukka03}
+K.~K. Mukkavilli\texttt{,} A. Sabharwal\texttt{,}~E. Erkip and B.~Aazhang.
+\newblock On beamforming with finite rate feedback in multiple-antenna systems.
+\newblock {\em IEEE Trans Information Theory}, 49:2562--2579, October 2003.
+
+\bibitem{PXia04}
+P.~Xia and G.~B. Giannakis.
+\newblock Design and analysis of transmit-beamforming based on limited-rate
+  feedback.
+\newblock In {\em Proc. IEEE VTC}, September 2004.
+
+\bibitem{Roh04}
+J.~C. Roh and B.~D. Rao.
+\newblock Performance analysis of multiple antenna systems with vq-based
+  feedback.
+\newblock In {\em Proc. Asilomar Conference 2004}, Pacific Grove, CA, November
+  2004.
+
+\bibitem{Tong04}
+L.~Tong\texttt{,}B.~M. Sadler and M.~Dong.
+\newblock Pilot-assisted wireless transmissions: general model, design
+  criteria, and signal processing.
+\newblock {\em IEEE Signal Processing Magazine}, 21(56):12--25, November 2004.
+
+\bibitem{Coldrey06}
+M.~Coldrey and P.~Bohlin.
+\newblock Training-based mimo syetems: Part i/ii.
+\newblock {\em Technical Report (http://db.s2.chalmers.se/)}, (R032/033), June
+  2006.
+
+\bibitem{Dong02}
+M.~Dong and L.~Tong.
+\newblock Optimal design and placement of pilot symbols for channel estimation.
+\newblock {\em IEEE Trans. on Signal Processing}, 50(12):3055--3069, December
+  2002.
+
+\bibitem{Shannon56}
+C.~E. Shannon.
+\newblock The zero error capacity of a noisy channel.
+\newblock {\em IRE Trans. Inf. Theory}, 2(3):8--19, September 1956.
+
+\bibitem{Kim06}
+Y.~H. Kim.
+\newblock Feedback capacity of the first-order moving average gaussian channel.
+\newblock {\em IEEE Trans. on Inf. Theory}, 52(7):3063--3079, July 2006.
+
+\bibitem{Kramer69}
+A.~J. Kramer.
+\newblock Improving communication reliability by use of an intermittent
+  feedback channel.
+\newblock {\em IEEE Trans. Inf. Theory}, 15:52--60, January 1969.
+
+\bibitem{Love02}
+D.~J. Love\texttt{,} R. W.~Heath\texttt{,} Jr.\texttt{,} and T.~Strohmer.
+\newblock Quantized maximal ratio transmission for multiple-input
+  multiple-output wireless systems.
+\newblock In {\em Proc. Asilomar Conference 2002}, Pacific Grove, CA, November
+  2002.
+
+\end{thebibliography}

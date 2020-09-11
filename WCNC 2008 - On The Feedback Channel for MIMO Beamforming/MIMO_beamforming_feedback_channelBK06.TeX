@@ -1,0 +1,815 @@
+
+\documentclass[10pt,fleqn, twocolumn]{IEEEtran}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+
+\newtheorem{Prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+
+\setlength{\parindent}{3em} \setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in} % sets 1in left and right margins
+\setlength{\topmargin}{0.20in} % change to 0.2in for regular latex
+%\setlength{\headheight}{0in}
+%\setlength{\footheight}{0.5in}
+\setlength{\footskip}{0.5in}
+\setlength{\textheight}{9.0in} %sets 1in top and bottom margins
+\renewcommand{\baselinestretch}{1} %set to 1.5 for double spacing.
+
+\newcommand{\br}{{\mathbf r}}
+\newcommand{\bA}{{\mathbf A}}
+\newcommand{\ba}{{\bf a}}
+\newcommand{\bb}{{\bf b}}
+\newcommand{\bc}{{\bf c}}
+\newcommand{\bC}{{\bf C}}
+\newcommand{\bd}{{\bf d}}
+\newcommand{\be}{{\bf e}}
+\newcommand{\bE}{{\bf E}}
+\newcommand{\bbf}{{\bf f}}
+\newcommand{\bF}{{\bf F}}
+\newcommand{\bh}{{\bf h}}
+\newcommand{\bH}{{\bf H}}
+\newcommand{\bg}{{\bf g}}
+\newcommand{\bG}{{\bf G}}
+\newcommand{\bq}{{\bf q}}
+\newcommand{\bs}{{\bf s}}
+\newcommand{\bm}{{\bf m}}
+\newcommand{\bn}{{\bf n}}
+\newcommand{\bu}{{\bf u}}
+\newcommand{\bv}{{\bf v}}
+\newcommand{\bw}{{\bf w}}
+\newcommand{\bx}{{\bf x}}
+\newcommand{\by}{{\bf y}}
+\newcommand{\bz}{{\bf z}}
+\newcommand{\bL}{{\bf L}}
+\newcommand{\bM}{{\bf M}}
+\newcommand{\bN}{{\bf N}}
+\newcommand{\bS}{{\bf S}}
+\newcommand{\bT}{{\bf T}}
+\newcommand{\bD}{{\bf D}}
+\newcommand{\bX}{{\bf X}}
+\newcommand{\bP}{{\bf P}}
+\newcommand{\bQ}{{\bf Q}}
+\newcommand{\bI}{{\bf I}}
+\newcommand{\bR}{{\bf R}}
+\newcommand{\bU}{{\bf U}}
+\newcommand{\bV}{{\bf V}}
+\newcommand{\bW}{{\bf W}}
+\newcommand{\bY}{{\bf Y}}
+\newcommand{\bZ}{{\bf Z}}
+\newcommand{\bJ}{{\bf J}}
+\newcommand{\bB}{{\bf B}}
+\newcommand{\bzero}{{\bf 0}}
+\newcommand{\bgamma}{{\mbox {\boldmath $\gamma$}}}
+\newcommand{\btheta}{{\mbox {\boldmath $\theta$}}}
+\newcommand{\bvartheta}{{\mbox {\boldmath $\vartheta$}}}
+\newcommand{\bDelta}{{\mbox {\boldmath $\Delta$}}}
+\newcommand{\bLambda}{{\mbox {\boldmath $\Lambda$}}}
+\newcommand{\bPsi}{{\mbox {\boldmath $\Psi$}}}
+\newcommand{\bPhi}{{\mbox {\boldmath $\Phi$}}}
+\newcommand{\bphi}{{\mbox {\boldmath $\phi$}}}
+\newcommand{\bcA}{{\mbox {\boldmath ${\cal A}$}}}
+\newcommand{\bcB}{{\mbox {\boldmath ${\cal B}$}}}
+\newcommand{\bcC}{{\mbox {\boldmath ${\cal C}$}}}
+\newcommand{\bcD}{{\mbox {\boldmath ${\cal D}$}}}
+\newcommand{\bcF}{{\mbox {\boldmath ${\cal F}$}}}
+\newcommand{\bcG}{{\mbox {\boldmath ${\cal G}$}}}
+\newcommand{\bcL}{{\mbox {\boldmath ${\cal L}$}}}
+\newcommand{\bcN}{{\mbox {\boldmath ${\cal N}$}}}
+\newcommand{\bcR}{{\mbox {\boldmath ${\cal R}$}}}
+\newcommand{\bcS}{{\mbox {\boldmath ${\cal S}$}}}
+\newcommand{\bcH}{{\mbox {\boldmath ${\cal H}$}}}
+\newcommand{\bcI}{{\mbox {\boldmath ${\cal I}$}}}
+\newcommand{\bcO}{{\mbox {\boldmath ${\cal O}$}}}
+\newcommand{\bcP}{{\mbox {\boldmath ${\cal P}$}}}
+\newcommand{\bcQ}{{\mbox {\boldmath ${\cal Q}$}}}
+\newcommand{\bcV}{{\mbox {\boldmath ${\cal V}$}}}
+\newcommand{\bcW}{{\mbox {\boldmath ${\cal W}$}}}
+
+
+\title{On Feedback Channel for MIMO Beamforming}
+\author{\\LG Electronics Mobile Research\\San Diego, CA 92131-1807}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}\small
+The distortion and reliability of the feedback channel for MIMO
+beamforming are investigated in this paper. We model MIMO
+beamforming feedback by a noisy Gaussian binary erasure feedback
+channel, in which the MIMO forwardlink is modelled as a Gaussian
+channel and the reverselink is simplified as a Gaussian binary
+erasure channel. For forwardlink channel estimation, Cramer-Rao
+lower bound is derived for time-multiplexing pilot pattern and
+superimposed pilots, respectively. For reverselink transmission, a
+sphere-packing bound for codebook design is given. The distortion
+and reliability of a given rate are analyzed.
+
+\end{abstract}
+\section{Introduction}
+Multi-antenna systems have received much attention over the last
+decades, due to their promise of higher spectrum efficiency with
+no transmit power increase. For multiple-input multiple-output
+(MIMO) transmission, it is well-known that the retransmission
+delay, reliability and complexity can be improved by making
+channel state information (CSI) available at the transmitter side.
+This is usually achieved through a reverselink CSI feedback
+channel from receiver. In practice, the CSI received by the
+transmitter is imperfect and suffers from various impairments
+including round-trip delay, channel estimation error, codebook
+limitation, etc. It results that the actual forwardlink throughput
+is degraded.
+
+MISO/MIMO beamforming systems with ideal Lloyd vector quantization
+(VQ)~\cite{Narula98}, different channel model~\cite{Mukka03} or
+different performance metrics~\cite{PXia04,Roh04} were discussed.
+However, most of them are done without considering the effects of
+"noisy" feedback including forwardlink pilot design and channel
+estimation, even though they are among the most important
+components of actual multi-antenna systems. In reality, MIMO CSI
+is estimated with forwardlink common pilot channels sent from each
+transmitter antenna. An overview of pilot-assisted transmission
+(PAT) including pilot placement and channel estimation can be
+found in~\cite{Tong04}. In most multi-antenna systems, pilot
+channels are designed to be orthogonal to other channels and
+periodically sent by transmitter. Nonorthogonal pilot design like
+superimposed pilots (SIP) has recently received much attention for
+channel estimation too~\cite{Coldrey06}. Optimal pilot placement
+was investigated in~\cite{Dong02}. In practical system design, it
+is important to understand how the forwardlink design and
+reverselink channel affect the reliability of feedback channel and
+therefore system throughput with finite-rate feedback.
+
+The analysis of MIMO feedback channel is an example of joint
+source-channel coding problem. In this paper, the distortion and
+reliability of MIMO feedback channel are discussed with
+considering forwardlink design and reverselink channel condition.
+The forwardlink for channel estimation is modelled as a Gaussian
+channel with pilot and data signals transmitted. On MIMO
+forwardlink design, the Cramer-Rao lower bound (CRLB) of channel
+estimation is analyzed and presented, respectively, for
+time-multiplexed pilots (TMP) or SIP. The MIMO feedback channel in
+reverselink is modelled as a binary erasure channel with additive
+Gaussian noise. The binary erasure channel is a popular and
+simplified model for fading channel, especially for reverselink
+feedback channels. With this noisy Gaussian binary erasure
+feedback channel model, it shows that the actual transmit rate of
+feedback channel is lower bounded by the channel quantization and
+upper bounded by the transmit reliability.  Therefore some
+tradeoff for feedback channel design are revealed.
+
+\section{System Model And Problem Description\label{MIMO_system_model}}
+
+Consider a MIMO link consisting of a transmitter with $M$ transmit
+antennas, a receiver with $N$ receive antenna and a MIMO channel
+represented by the $N\times M$ matrix $\bH=\left[\bh_{1}\ \bh_{2}\
+\ldots\ \bh_{N}\right]^{\rm T}$ with $\bh_{n}=\left[h_{n,1}\
+h_{n,2}\ \ldots\ h_{n,M}\right]^{\rm T}$ . The $N\times 1$
+received signal $\by$ is
+\begin{equation}
+\begin{array}{rcccl}
+\by&=&\left[y_{1}\ y_{2}\ \ldots\ y_{N}\right]^{\rm T}& = &
+\bH\bW\bx+\bn
+\end{array}\label{Direct_MIMO}
+\end{equation}
+\noindent where $\bx=\left[x_{1}\ x_{2}\ \ldots\ x_{M}\right]^{\rm
+T}$ is the $M\times 1$ signal vector transmitted by the source
+with $\bR_{\bx}=\mbox{E}\left\{\bx\bx^{\rm
+H}\right\}=\frac{P}{M}\bI_{M}$, $P$ is the total transmit power,
+$\bW=\left[\bw_{1}\ \bw_{2}\ \ldots\ \bw_{M}\right]$ is a $M\times
+M$ MIMO beamforming precoding matrix with
+$\left\|\bw_{m}\right\|_2=1$, $\bn\sim{\bcC\bcN}(0,
+\sigma^2\bI_{N})$ is a complex circular white Gaussian vector,
+$\left[\ast\right]^{\rm T}$ and $\left[\ast\right]^{\rm H}$
+denotes the transpose operator and Hermitian conjugate operator,
+respectively. The MIMO channel achievable spectral efficiency is
+\begin{equation}\hspace{-0.14in}
+\begin{array}{l}
+\eta=\log\left|\bI+\frac{P}{M}\bH\bW\bW^{\rm H}\bH^{\rm H}\right|=
+\sum\limits_{k=1}^{K}\log\left(1+\frac{\rho_{i}}{M}\right)
+\end{array}\label{spectral_eff}
+\end{equation}
+\noindent where $\rho_{i}$ denotes the received signal-to-noise
+ratio (SNR) of the $k$th beam, which is given by
+\begin{equation}
+\begin{array}{rcccl}
+\rho_{i}&=&\frac{\mbox{var}\left\{\bH\bw_{i}x_{i}\right\}}{\sigma^2}&=&\frac{\lambda_{i}P_{i}}{\sigma^2}
+\end{array}\label{SNR_i}
+\end{equation}
+\noindent with $\lambda_{i}$ denoting the antenna gain of the
+$i$th beam and also the $i$th eigenvalue of the MIMO channel
+autocorrelation matrix $\bR_{\bH}$ defined by
+\begin{equation}
+\begin{array}{l}
+\bR_{\bH}=\bH^{\rm H}\bH=\sum\limits_{m=1}^{M}\bh_{m}\bh_{m}^{\rm
+H}=\sum\limits_{i=1}^{M}\lambda_{i}\bv_{i}\bv_{i}^{\rm H}
+\end{array},\label{R_h}
+\end{equation}
+\noindent $\bv_{i}$ denotes the $i$th eigenvector, the operator
+$\left|\ast\right|$ denotes the determinant of matrix $\ast$, and
+$\mbox{var}\left\{\ast\right\}$ denotes the variance of random
+variable $\ast$. (\ref{spectral_eff}) and (\ref{SNR_i}) are the
+results from the assumption of perfect CSI available at
+transmitter, however this may not be consistent with practical
+applications.
+
+\begin{figure}
+\center{
+\includegraphics[width=3.0in, angle=0]{Noisy_Gaussian_Feedback_Channel2.eps}
+\caption{Noisy Gaussian binary erasure feedback channel with
+channel quantization.}\label{noisy_Gaussian_feedback} }
+\end{figure}
+
+MIMO beamforming with finite-rate feedback can usually be modelled
+as a noisy Gaussian binary erasure feedback channel depicted in
+Fig.~\ref{noisy_Gaussian_feedback}. In reality, the receivers
+estimate $\bH$ or $\bR_{\bH}$ with the pilots sent by transmitter
+at first. Accuracy of the channel estimation largely depends on
+forwardlink design. The purpose of pilot transmission is for easy
+channel estimation at the receiver side. After channel estimation,
+the receiver chooses a beamforming vector from a shared MIMO
+precoding codebook. This is called channel quantization. The
+receiver then feeds back the chosen precoding index(es) to
+transmitter(s) instead of actual channel response for the next
+transmit precoding. With a MIMO codebook $\bcW$ of the size $2^B$
+consisting of $M$-dimensional normalized vectors $\left\{\bw_{1},
+..., \bw_{2^{B}}\right\}$, it takes the receiver to feedback $B$
+bits for each beam stream. A codebook is usually designed to
+quantize channel responses with certain distortion
+measures~\cite{Narula98}. This is related to Grassmannian line
+packing, the spherical packing on unit sphere
+$\bcS_{n}\left(1\right)$~\cite{Love02} etc., where
+$\bcS_{n}(R)=\left\{\bv:\ \left\|\bv\right\|=R\right\}$ denotes
+$(n-1)$-sphere of radius $R$. When a codeword $\bw_k$ is chosen to
+precode transmit signals for $i$th beam $\bv_{i}$ at the
+transmitter side, some degradation will usually happen on the
+signals received by receiver because of imperfect channel
+estimation and finite-rate feedback. This degradation on received
+signals can be expressed by
+\begin{equation}
+\begin{array}{rcl}
+\delta_{i} & = & \min\limits_{\bw\in\bcW}\left\|\bH\bv_{i}-\bH\bw\right\|\\
+&=&\lambda_{i}\left(1-\bv_{i}^{\rm
+H}\bw_k\right)-\sum\limits_{j\neq i}\lambda_{j}\bv_{j}^{\rm
+H}\bw_{k}
+\end{array}\label{delta_i}
+\end{equation}
+\noindent where $\bv_{i}$ is the ideal precoding vector for $i$th
+eigen-mode of $\bH$. It is known that $\delta_{i}$, which depends
+on $\bv_{i}$, $\bw_{k}$ and $\lambda_{i}$, etc., is one of the
+major factors limiting closed-loop MIMO beamforming throughput,
+
+In MIMO feedback channel design, the rate distortion and
+reliability are of the most important concerns. For rate
+distortion, the region of achievable rate distortion pair
+$\left(R,\ D_{\bh}\right)$ with the squared error distortion
+\begin{equation}
+\begin{array}{rcl}
+D\left(R\right)&=&\sum\limits_{m=1}^{M}\left(w_{i,m}-v_{i,m}\right)^2
+\end{array}\label{squared_error_distortion}
+\end{equation}
+\noindent is of the most interests.
+
+
+
+
+is defined with the squared error rate distortion of channel
+quantization
+\begin{equation}
+\begin{array}{l}
+D_{\phi}\left(R\right)=\sum\limits_{m=1}^{M}\left(w_{i,m}-v_{i,m}\right)^2=2\left(1-\alpha^{2}\right)
+\end{array},\label{squared_error_distortion}
+\end{equation}
+\noindent where $\alpha=\bw_{i}^{\rm H}\bv_{i}$. And the
+achievable rate reliability pair $\left(R,\ \epsilon\right)$ is
+defined with the error exponent $\epsilon$ denoting how fast the
+reverselink bit-error rate (BER) $P_{e}$ decays for the transmit
+rate $R$ and which can be expressed by
+
+\begin{equation}
+\begin{array}{rcccl}
+\epsilon&=&\lim\limits_{n\rightarrow\infty}\sup
+\epsilon_{n}&=&\lim\limits_{n\rightarrow\infty}\sup-\frac{1}{n}\ln
+P_{e}
+\end{array}
+\end{equation}
+
+\noindent where $\epsilon_{n}=-\frac{1}{n}\ln P_{e}$ denotes the
+reliability of $n$-bits block transmission and $n$ is the minimum
+block-length needed in order to operate at rate $R$ with the error
+probability $P_{e}$. In the following sections, we will discuss
+how the imperfect channel estimation, quantization and channel
+condition affect the rate distortion and reliability of MIMO
+feedback channel.
+
+\section{MIMO Channel Quantization Distortion}
+In general, the lower bound to the mean-squared errors (MSE) of
+unbiased channel estimates of $\bh$ is given by CRLB, which is
+defined as the inverse of the Fisher Information Matrix (FIM),
+\begin{equation}%\hspace{-0.10in}
+\begin{array}{rcl}
+\mbox{MSE}\left\{\bh-\hat{\bh}\right\}&\geq&\left[\bF\left(\vartheta\right)\right]^{-1}\\
+&\hspace{-2.10in}=&\hspace{-1.10in}\mbox{E}^{-1}\left\{\left[\frac{\partial\ln\mbox{Pr}\left(\by|\vartheta\right)}{{\partial\vartheta}^{\ast}}\right]\left[\frac{\partial\ln\mbox{Pr}\left(\by|\vartheta\right)}{{\partial\vartheta}^{\ast}}\right]^{\rm
+H}\right\}\end{array}\label{CRLB}
+\end{equation}
+\noindent with $\bvartheta$ the parameter vector to be estimated.
+If the MSE of forwardlink channel estimation is
+$\sigma_{\mbox{\tiny FL}}^{2}$, the minimum rate at distortion
+$D_{\bh}$ is given by
+\begin{equation}\hspace{-0.10in}
+\begin{array}{rcl}
+R(D_{\bh})&=&\sum\limits_{i=1}^{N}\min\limits_{E\{d(\bh_{i},\
+\hat{\bh}_{i})\leq D_{\bh}\}} I\left(\bh_{i};\
+\hat{\bh}_{i}\right)\\
+&\geq&\frac{N}{2}\log_{2}\left(\frac{\sigma_{\hat{h}}^{2}}{D_{\bh}}\right)\\
+&=&\frac{N}{2}\log_{2}\left(\frac{\sigma_{\mbox{\tiny
+FL}}^{2}+\sigma_{h}^{2}}{D_{\bh}}\right)\ .
+\end{array}
+\end{equation}
+\begin{figure}
+\center{
+\includegraphics[width=3in, angle=0]{Pilot_Patterns.eps}
+\caption{Pilot patterns for channel
+estimation.}\label{pilot_pattern} }
+\end{figure}
+
+For a $M$-dimensional vector channel response $\bh=\left[h_{1}\
+h_{2}\ \ldots\ h_{M}\right]^{\rm T}$, the relationship between
+Cartesian coordinate system and spherical coordinate system is
+defined by
+\begin{equation}%\hspace{-0.20in}
+\begin{array}{rcl}
+h_{m}&=&r\Phi_{m}
+\end{array}\label{coordinate}
+\end{equation}
+\noindent with
+\begin{equation}\hspace{-0.20in}
+\begin{array}{rcl}
+\Phi_{m}&=&\begin{cases} \cos\phi_{m-1}\prod\limits_{i=1}^{m-2}\sin(\phi_{1})& m < M\\
+\sin\phi_{M-1}\prod\limits_{i=1}^{M-2}\sin(\phi_{i})& m= M
+\end{cases}
+\end{array}.\label{phi_coordinate}
+\end{equation}
+\noindent The Jacobian transformation of (\ref{coordinate}) is
+\begin{equation}%\hspace{-0.20in}
+\begin{array}{rcl}
+\frac{\partial }{\partial \left(r,\
+\phi_{i}\right)}h_{m}&=&\left[\Phi_{m}\ \
+r\frac{\partial}{\partial\phi_{i}}\Phi_{m}\right]
+\end{array}.\label{Jacobian}
+\end{equation}
+\noindent The total squared error rate distortion $D_{\bh}$ can be
+decomposed into
+\begin{equation}%\hspace{-0.20in}
+\begin{array}{rcl}
+D_{\bh}&\leq&D_{r}+r^{2}D_{\phi}
+\end{array}
+\end{equation}
+\noindent with $D_{r}$ denoting the rate distortion of channel
+amplitude quantization $r=\left\|\bh\right\|$ and $D_{\phi}$
+denoting the phase distortion of $\sqrt{1-\alpha^2}$.
+
+
+
+\begin{lemma}(Cramer-Rao Lower Bound) For the time-multiplexed pilot and data design shown in Fig.~\ref{pilot_pattern}(a) and defined by
+\begin{equation}
+\begin{array}{rcl}
+s_{k}\left(l\right)&=&
+\begin{cases}
+s_{pk}(l) & 1 \leq l \leq Q \\
+s_{dk}(l-Q) & Q+1\leq l\leq L
+\end{cases}
+\end{array},\label{TMP_k}
+\end{equation}
+\noindent the CRLB of channel estimation is
+\begin{equation}
+\begin{array}{rcl}
+\sigma_{\mbox{\tiny
+FL}}^{2}&\geq&\left[\rho_{h}^2+Q\rho_{p}^2+\left(L-Q\right)\rho_{d}^2\right]^{-1}
+\end{array}.\label{CRLB_TMP}
+\end{equation}
+\noindent For the superimposed pilot and data design shown in
+Fig.~\ref{pilot_pattern}(b) and defined by
+\begin{equation}
+\begin{array}{rcl}
+s_{k}\left(l\right)&=&\frac{\sigma_{p}}{P}s_{pk}\left(l\right)+\frac{\sigma_{d}}{P}s_{dk}\left(l\right)\
+,\ 1\leq l\leq L\ ,
+\end{array}\label{SIP_k}
+\end{equation}
+\noindent with $\sigma_{p}^2+\sigma_{d}^2=P$, the CRLB of channel
+estimation is
+\begin{equation}\
+\begin{array}{rcl}
+\sigma_{\mbox{\tiny
+FL}}^{2}&\geq&\left[\rho_{h}^2+L\left(\rho_{p}^2+\rho_{d}^2\right)\right]^{-1}
+\end{array}\label{CRLB_SIP}
+\end{equation}
+\noindent where $\rho_{p}^2=\frac{\sigma_{p}^2}{\sigma_{n}^2}$
+denotes the SNR of received pilot signals and
+$\rho_{d}^2=\frac{\sigma_{d}^2}{\sigma_{n}^2}$ denotes the SNR of
+received data signals.
+\end{lemma}
+
+
+
+
+
+
+\noindent With Lemma 1, the correlation matrix of channel estimate
+$\hat{\bh}$ is
+\begin{equation}
+\begin{array}{rcl}
+\bR_{\hat{\bH}}&=& \bR_{\bH} + \frac{\sigma_{\mbox{\tiny FL}}^{2}}{L_{c}^2}\bI\\
+&=&\sum\limits_{i=1}^{M}\left(\lambda_{i}+\frac{\sigma_{\mbox{\tiny
+FL}}^2}{L_{c}^2}\right)\bv_{i}\bv_{i}^{\rm H}
+\end{array}
+\end{equation}
+\noindent and the rate distortion function for eigenvalue
+quantization is
+\begin{equation}
+\begin{array}{rcl}
+R_{\lambda}\left(D\right)&\geq&\frac{1}{2}\log_{2}\left(\frac{\sigma_{\mbox{\tiny
+FL}}^{2}}{L_{c}^{2}D}+\frac{\sigma_{\lambda}^{2}}{D}\right)
+\end{array}.
+\end{equation}
+
+
+
+
+\subsection{Channel Amplitude Quantization}
+
+
+In general, the channel estimation model for frequency-selective
+block fading channel is different to (\ref{Direct_MIMO}). For
+practical channel estimation, not only the whole channel impulse
+response but also the pilot placement should be considered.
+Considering a $M$-input/$N$-output MIMO channel with
+frequency-selective block fading, which means the random channels
+taps remain constant for some data packets and change to
+independent values for the next block, the received baseband
+signal can be written by
+\begin{equation}\hspace{-0.20in}
+\begin{array}{rcl}
+\by&=&\left[\begin{matrix}y_{1}(t)&y_{2}(t)&\cdots&y_{N}(t)\end{matrix}\right]^{\rm T}\\
+&=&\left[\begin{matrix}\sum\limits_{m=1}^{M}h_{m,1}(t)\otimes s_m(t)\\ \sum\limits_{m=1}^{M}h_{m,2}(t)\otimes s_m(t)\\ \vdots \\
+\sum\limits_{m=1}^{M}h_{m,N}(t)\otimes
+s_m(t)\end{matrix}\right]+\left[\begin{matrix}n_{1}(t)\\ n_{2}(t)\\ \vdots\\
+n_{N}(t)\end{matrix}\right]\\
+&=&\bS\bh+\bn
+\end{array}
+\end{equation}
+\noindent where $s_m(t)$ denotes the transmitted symbol from the
+$m$th antenna, $\bh$ is the stretched channel vector defined by
+\begin{equation}\hspace{-0.00in}
+\begin{array}{rcl}
+\bh&=&\mbox{vec}\left(\left[\mbox{vec}(\bH_{1})\
+\mbox{vec}(\bH_{2})\ \ldots\ \mbox{vec}(\bH_{N})\right]\right)
+\end{array}
+\end{equation}
+\noindent with $\bH_{n}=\left[\bh_{n}(0)\ \bh_{n}(1)\ \ldots\
+\bh_{n}(L_{c}-1)\right]$, $\bh_{n}(l)=\left[h_{n,1}(l)\
+h_{n,2}(l)\ \ldots\ h_{n,M}(l)\right]^{\rm T}$ for $1\leq l \leq
+L_{c}$, and
+\begin{equation}\hspace{-0.00in}
+\begin{array}{rcl}
+\bS&=&\mbox{kron}\left(\left[\bS_{1}\ \bS_{2}\ \ldots\
+\bS_{M}\right]^{\rm T},\ \bI\right)
+\end{array}
+\end{equation}
+\noindent with
+\begin{equation}\hspace{-0.10in}
+\begin{array}{rcl}
+\bS_{k}&=&\left[\begin{matrix}
+s_{k}(L)&\cdots&s_{k}(L-L_{c})\\
+s_{k}(L-1)&\cdots&s_{k}(L-L_{c}-1)\\
+\vdots&\ddots&\vdots\\
+s_{k}(1)&\cdots&s_{k}(1-L_{c})
+\end{matrix}\right]
+\end{array}.\label{S_k}
+\end{equation}
+\noindent $L_{c}$ is the maximum channel order for all
+subchannels. After the channel response vector $\bh$ is estimated,
+we can calculate the channel correlation matrix $\bR_{\bH}$ by
+\begin{equation}\hspace{-0.1in}
+\begin{array}{rcl}
+\hat{\bR}_{\bH}&=&\frac{1}{L_{c}}\sum\limits_{l=1}^{L_{c}}\sum\limits_{n=1}^{N}\hat{\bh}_{n}\left(L_{c}+l\right)\hat{\bh}_{n}^{\rm
+H}\left(L_{c}+l\right)
+\end{array}.\label{R_h_actual}
+\end{equation}
+
+There are many ways to put pilot symbols and data symbols together
+for PAT. We focus on two most popular designs: an {orthogonal
+design} by {time-multiplexed pilot pattern}, and a {non-orthogonal
+design} by {superimposed pilot pattern}, in this paper. TMP is a
+typical example of orthogonal pilot design where pilot symbols and
+data symbols are separated in time and/or frequency domain, which
+makes them orthogonal to each other. With orthogonal pilots, the
+channel estimation and data demodulation can be done separately
+which may lead to simple receiver design~\cite{Dong02}. SIP does
+the opposite. In SIP design, pilots and data nonorthogonally share
+the same time period and frequency band. In this case, joint
+channel estimation/demodulation and the demodulation with pilot
+interference cancellation are among the most popular receiver
+design techniques~\cite{Coldrey06}.
+
+\subsubsection{Time-Multiplexed Pilots and Data}
+The concept of TMP design is to send $Q$ known pilot symbols and
+$\left(L-Q\right)$ data symbols consecutively and separately in
+time domain. One possible example of TMP is shown in
+Fig.~\ref{pilot_pattern}(a), in which the transmitted symbol
+$s_{k}(l)$ is
+\begin{equation}
+\begin{array}{rcl}
+s_{k}\left(l\right)&=&
+\begin{cases}
+s_{pk}(l) & 1 \leq l \leq Q \\
+s_{dk}(l-Q) & Q+1\leq l\leq L
+\end{cases}
+\end{array},\label{TMP_k}
+\end{equation}
+\noindent where $s_{pk}(t)$, $1\leq t \leq Q$, denotes the pilot
+symbols transmitted in power $\sigma_{p}^2$ and $s_{dk}(t)$,
+$Q+1\leq t \leq L$, denotes the data symbols transmitted in power
+$\sigma_{d}^2$.
+\subsubsection{Superimposed Pilots and Data}
+In SIP design, data symbols and pilot symbols are simultaneously
+sent within one frame of $L$ symbols. This can be shown in
+Fig.~\ref{pilot_pattern}(b). In this case, the transmitted symbol
+$s_{k}(l)$ becomes
+\begin{equation}
+\begin{array}{rcl}
+s_{k}\left(l\right)&=&\frac{\sigma_{p}}{P}s_{pk}\left(l\right)+\frac{\sigma_{d}}{P}s_{dk}\left(l\right)\
+,\ 1\leq l\leq L\ ,
+\end{array}\label{SIP_k}
+\end{equation}
+\noindent with $\sigma_{p}^2+\sigma_{d}^2=P$.
+
+If we denotes $\bvartheta=\left[\bh^{\rm T}\ \bs_{d}^{\rm
+T}\right]^{\rm T}$, the complex FIM is given by
+\begin{equation}\hspace{-0.10in}
+\begin{array}{rcl}
+\mbox{F}\left(\bvartheta\right)&=&\mbox{E}\left\{\left[\frac{\partial\ln\mbox{Pr}\left(\by|\vartheta\right)}{{\partial\vartheta}^{\ast}}\right]\left[\frac{\partial\ln\mbox{Pr}\left(\by|\vartheta\right)}{{\partial\vartheta}^{\ast}}\right]^{\rm H}\right\}\\
+ &\hspace{-0.90in}=&\hspace{-0.50in}\sigma_{n}^{-2}\left[\begin{matrix}
+\mbox{E}\left\{\bS^{\rm
+H}\bS\right\}+\rho_{h}^2\bI&\bzero\\
+\bzero&\mbox{E}\left\{\bcH^{\rm H}\bcH\right\}+\rho_{s_{d}}^2\bI
+\end{matrix}\right]
+\end{array}\label{FIM}
+\end{equation}
+\noindent where
+$\rho_{h}^{2}=\mbox{E}\left\{\left|\frac{\partial\ln\mbox{Pr}\left(h\right)}{{\partial
+h}^{\ast}}\right|^2\right\}$ and
+$\rho_{s_{d}}^{2}=\mbox{E}\left\{\left|\frac{\partial\ln\mbox{Pr}\left(s_{d}\right)}{{\partial
+s_{d}}^{\ast}}\right|^2\right\}$. The CRLB on the channel
+estimation with either TMP or SIP can therefore be formulated by
+the following lemma.
+\begin{lemma}(Cramer-Rao Lower Bound) For the time-multiplexed pilot and data design defined in
+(\ref{TMP_k}), the CRLB of channel estimation is
+\begin{equation}
+\begin{array}{rcl}
+\sigma_{\mbox{\tiny
+FL}}^{2}&\geq&\left[\rho_{h}^2+Q\rho_{p}^2+\left(L-Q\right)\rho_{d}^2\right]^{-1}
+\end{array}.\label{CRLB_TMP}
+\end{equation}
+\noindent For the superimposed pilot and data design defined in
+(\ref{SIP_k}), the CRLB of channel estimation is
+\begin{equation}\
+\begin{array}{rcl}
+\sigma_{\mbox{\tiny
+FL}}^{2}&\geq&\left[\rho_{h}^2+L\left(\rho_{p}^2+\rho_{d}^2\right)\right]^{-1}
+\end{array}\label{CRLB_SIP}
+\end{equation}
+\noindent where $\rho_{p}^2=\frac{\sigma_{p}^2}{\sigma_{n}^2}$
+denotes the SNR of received pilot signals and
+$\rho_{d}^2=\frac{\sigma_{d}^2}{\sigma_{n}^2}$ denotes the SNR of
+received data signals.
+\end{lemma}
+
+
+\subsection{Channel Phase Quanization}
+\begin{figure}
+\center{
+\includegraphics[width=3.20in, angle=0]{Voronoi_Bounds2.eps}
+\caption{Voronoi cell and various bounds}\label{Voronoi_bound} }
+\end{figure}
+
+Instead of finding the exact boundary for the Voronoi cell
+$\bcV_{i}$, we suggest a heuristic approach using sphere-packing
+bound and sphere cap to approximate the actual polytope boundary.
+It also is an approximate of the sphere packing solution, in which
+all spheres are supposed to be non-overlappedly placed. With our
+approach, sphere caps are overlapped with each other in space but
+the interior of them has the same area as the Voronoi cell. The
+border of this sphere cap is termed sphere-packing boundary. The
+relationship between sphere-packing boundary and Voronoi cell is
+shown in Fig.~\ref{Voronoi_bound}. For an uniform random codebook
+of size $2^{B}$ in $M$-dimensional Euclid space, the area of a
+Voronoi cell is given by
+\begin{equation}
+\begin{array}{rcl}
+A\left(\bcV_{k}\right)&=&
+\frac{2{\pi}^{M}}{2^{B}\Gamma\left(M\right)}
+\end{array}\label{V_area}
+\end{equation}
+\noindent where $\Gamma\left(\ast\right)$ denotes the gamma
+function. On the other hand, the area of $(m-1)$-complex sphere
+cap $\bcC_{m}^{\rm c}\left(\psi,\ R\right)$ with contact angle
+$\psi$ and radius $R$ is
+\begin{equation}%\hspace{-0.22in}
+\begin{array}{l}
+A\left(\bcC_{m}^{\rm c}\left(\psi,\
+R\right)\right)=\left[1-\cos^{2(m-1)}\left(\psi\right)\right]S_{m}^{\rm
+c}\left(R\right),
+\end{array}
+\end{equation}
+\noindent where ${\bcS}_{m}^{\rm c}\left(R\right)$ denotes a
+$M$-dimension complex ball in Euclid space with the radius $R$.
+The relationship between ${\bcS}_{m}^{\rm c}\left(R\right)$ and
+$\bcC_{m}^{\rm c}\left(\psi,\ R\right)$ can be shown in
+Fig.~\ref{Voronoi_bound} and it can be verified that
+\begin{equation}
+\begin{array}{rcl}
+A\left(S_{m}^{c}\left(R\right)\right)&=&A\left(\bcC_{m}^{\rm
+c}\left(\pi,\ R\right)\right)
+\end{array}.
+\end{equation}
+\noindent With matching the sum area of the sphere-cap with the
+whole sphere area, the boundary of a Voronoi cell can be
+approximated by a hypershpere or a closed space curve defined in
+the following proposition.
+\begin{Prop}\label{approx_bound}(Sphere-packing Boundary) The boundary of the uniform complex Voronoi cell $\bcV_{k}$ can be
+approximated by a $(M-1)$-unit complex sphere or a closed complex
+space curve.
+\begin{equation}\hspace{-0.05in}
+\begin{array}{rcl}
+\bB\left(\bcV_{k}\right)&\approx& \bcS_{M}^{\rm c}(1)\bigcap \bcL_{M}^{\rm c}(\bw_{k},\ \cos(\theta)) \\
+&=&\left\{\bv:\ \left\|\bv\right\|=1,\ \angle\left(\bv,\
+\bw_{k}\right)=\theta\right\}\ ,
+\end{array}
+\end{equation}
+\noindent where $\bcL_{M}^{\rm c}\left(\bw_{k},\
+\cos(\theta)\right)=\left\{\bv:\ \bv^{\rm
+H}\bw_{k}=\cos(\theta)\right\}$ denotes a complex space curve and
+$\theta$ is
+\begin{equation}%\hspace{-0.00in}
+\begin{array}{rcl}
+\theta&=&\arccos\left(\alpha_{0}\right)
+\end{array}
+\end{equation}
+\noindent with
+\begin{equation}\hspace{-0.00in}
+\begin{array}{rcl}
+\alpha_{0}&=&\left(\frac{2^B-1}{2^B}\right)^{\frac{1}{2M-2}}
+\end{array}.
+\end{equation}
+\end{Prop}
+On the other hand, if the ideal channel precoding vector $\bv_{i}$
+is assumed to be a random variable of $M$-dimensional uniform
+distribution, the probability density function (PDF)
+$\mbox{pr}\left(\alpha\right)$ of $\alpha$ are
+\begin{equation}\hspace{-0.10in}
+\begin{array}{l}
+\mbox{Pr}\left[x=\alpha\right]=\begin{cases}
+0 & 0\leq \alpha < \alpha_{0} \\
+\frac{\left(2M-2\right)\alpha\left(1-\alpha^2\right)^{M-2}}{\left(1-\alpha_{0}^{2}\right)^{M-1}}
+& \alpha_{0}\leq\alpha\leq 1
+\end{cases}
+\end{array}
+\end{equation}
+\noindent and the cumulated density function (CDF) is
+\begin{equation}\hspace{-0.15in}
+\begin{array}{l}
+\mbox{Pr}\left[x\leq\alpha\right]=
+\begin{cases}
+0 & 0 \leq\alpha < \alpha_{0} \\
+1-\left(\frac{1-\alpha^2}{1-\alpha_{0}^2}\right)^{M-1} &
+\alpha_{0}\leq\alpha\leq 1
+\end{cases}\ .
+\end{array}
+\end{equation}
+\noindent With the assumption of uniform random codebook and MIMO
+channels, the average received SINR $\bar\rho_{i}$ can be
+approximated by the following lemma.
+\begin{lemma} The standard deviation
+of $\alpha$ is given by
+\begin{equation}\hspace{-0.2in}
+\begin{array}{rcccl}
+\sigma_{\alpha}^2&=&\mbox{E}\left\{\alpha_{i}^2\right\}&=&\frac{1}{M}+\frac{M-1}{M}\left(\frac{2^B-1}{2^B}\right)^{\frac{1}{M-1}}
+\end{array}.\label{sigma_alpha}
+\end{equation}
+\end{lemma}
+
+
+\section{The Reliability of MIMO Feedback Channel}
+
+
+On the other hand, the minimum achievable rate at a certain
+distortion is given by Shannon distortion theory, where the rate
+distortion function is
+\begin{equation}\hspace{-0.10in}
+\begin{array}{rcl}
+R(D)&=&\min\limits_{E\{d(\bh,\ \hat{\bh})\leq D\}} I\left(\bH;\
+\hat{\bH}\right)
+\end{array}.\label{RDF}
+\end{equation}
+\noindent For a $\bcN\left(0,\ \sigma^2\right)$ source with the
+squared error distortion defined in
+(\ref{squared_error_distortion}), the minimum achievable rate at
+distortion D with no feedforward is
+\begin{equation}
+\begin{array}{rcl}
+R\left(D\right)&=&\begin{cases}
+\frac{1}{2}\log_{2}\left(\frac{\sigma^2}{D}\right)& 0\leq D \leq
+\sigma^2 \\
+0 & D > \sigma^2
+\end{cases}
+\end{array}.
+\end{equation}
+
+\noindent Therefore minimum rate for describing the MIMO
+forwardlink MIMO channel roughly is
+
+\begin{equation}\hspace{-0.2in}
+\begin{array}{rl}
+R_{\mbox{\tiny
+TMP}}\geq-\frac{1}{2}\log_{2}\left(\rho_{h}^2+Q\rho_{p}^2+\left(L-Q\right)\rho_{d}^2\right)-\frac{1}{2}\log_{2}D
+\end{array}
+\end{equation}
+
+\noindent for TMP and, for SIP, it is
+
+\begin{equation}\hspace{-0.3in}
+\begin{array}{l}
+R_{\mbox{\tiny
+TMP}}\geq-\frac{1}{2}\log_{2}\left(\rho_{h}^2+L\left(\rho_{p}^2+\rho_{d}^2\right)\right)-\frac{1}{2}\log_{2}D
+\end{array}.
+\end{equation}
+
+Since the reverselink channel model is a concatenation of a
+Gaussian channel and binary erasure channel, which are independent
+to each other, the well-known sphere-packing upper bound of
+Gaussian channel reliability function is
+\begin{equation}%\hspace{-0.00in}
+\begin{array}{rcl}
+\epsilon\left(R\right)&\leq&\epsilon_{\rm sp}\left(R\right)
+\end{array}
+\end{equation}
+\noindent with $\epsilon_{\rm
+sp}\left(R\right)=\frac{\gamma_{\mbox{\tiny
+RL}}}{2}-\frac{\sqrt{\gamma_{\mbox{\tiny
+RL}}}\eta\cos\theta}{2}-\ln\left(\eta\sin\theta\right)$ and the
+lower bound is
+\begin{equation}\hspace{-0.30in}
+\begin{array}{l}
+\epsilon\left(R\right)\geq\begin{cases} \frac{\gamma_{\mbox{\tiny
+RL}}}{4}\left(1-\cos\theta\right) &
+0\leq R\leq R_{1} \\
+\frac{\gamma_{\mbox{\tiny RL}}}{4}\left(1-\cos\theta_{1}\right)
++R_{1}-R_{0}&
+R_{1}\leq R\leq R_{2} \\
+\epsilon_{\rm sp}\left(R\right) &R_{2}\leq R\leq C
+\end{cases}
+\end{array}
+\end{equation}
+\noindent where $\gamma_{\mbox{\tiny RL}}=\frac{P_{\mbox{\tiny
+RL}}}{\sigma^2_{\mbox{\tiny RL}}}$ denotes the reverselink SNR,
+$\theta=\arcsin e^{-R}$ denotes the sphere-packing angle,
+\begin{equation}\hspace{-0.0in}
+\begin{array}{rcl}
+\eta&=&\frac{1}{2}\left(\sqrt{\gamma_{\mbox{\tiny
+RL}}}\cos\theta+\sqrt{\gamma_{\mbox{\tiny
+RL}}\cos^2\theta+4}\right)
+\end{array},
+\end{equation}
+\begin{equation}\hspace{-0.0in}
+\begin{array}{rcl}
+R_{1}&=&\frac{1}{2}\ln\left(\frac{1}{2}+\frac{1}{2}\sqrt{1+\frac{\gamma_{\mbox{\tiny
+RL}}}{4}}\right)
+\end{array},
+\end{equation}
+\begin{equation}\hspace{-0.0in}
+\begin{array}{rcl}
+R_{2}&=&\frac{1}{2}\ln\left(\frac{1}{2}+\frac{\gamma_{\mbox{\tiny
+RL}}}{4}+\frac{1}{2}\sqrt{1+\frac{\gamma_{\mbox{\tiny
+RL}}}{4}}\right)
+\end{array}
+\end{equation}
+\noindent and $\theta_{1}=\arcsin e^{-R_{1}}$.
+
+\section{Conclusions}
+In this paper, a sphere-packing boundary for codebook Voronoi
+decomposition and the beamforming SINR with finite-rate feedback
+are formulated. And the effects of imperfect channel estimation
+with time-multiplexed pilot pattern or superimposed pilot pattern
+on MIMO beamforming are discussed. Finally the scalability and the
+tradeoffs in increasing MIMO relay network throughput with
+imperfect channel estimation and quantization are discussed.
+
+\small
+\bibliographystyle{unsrt}
+\bibliography{Cooperative_Relay}
+\end{document}

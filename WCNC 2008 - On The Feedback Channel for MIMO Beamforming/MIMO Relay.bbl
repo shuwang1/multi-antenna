@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{WangB05}
+Bo~Wang\texttt{,}~Junshan Zhang and Anders Host-Madsen.
+\newblock On the capacity of mimo relay channels.
+\newblock {\em IEEE Transactions on Information Theory}.
+
+\bibitem{Narula98}
+A.~Narula\texttt{,} M. J. Lopez\texttt{,} M.~D. Trott and G.~W. Wornell.
+\newblock Efficient use of side information in multiple-antenna data
+  transmission over fading channels.
+\newblock {\em IEEE J. Select Areas in Communications}, 16(8):1423--1436,
+  October 1998.
+
+\bibitem{conway96packing}
+J.~Conway, R.~Hardin, and N.~Sloane.
+\newblock Packing lines, planes, etc.: Packings in grassmannian spaces, 1996.
+
+\end{thebibliography}
