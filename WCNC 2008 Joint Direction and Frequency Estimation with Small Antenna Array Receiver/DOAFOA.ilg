@@ -1,0 +1,1141 @@
+This is C:\Program Files\MiKTeX 2.5\miktex\bin\makeindex.EXE, version 2.14 [02-Oct-2002] (kpathsea + Thai support).
+Scanning input file DOAFOA...
+!! Input index error (file = DOAFOA, line = 1):
+   -- Unknown index keyword \documentclass[a4paper,10pt,fleqn,twocolumn].
+!! Input index error (file = DOAFOA, line = 3):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = DOAFOA, line = 4):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = DOAFOA, line = 5):
+   -- Unknown index keyword \usepackage.
+!! Input index error (file = DOAFOA, line = 8):
+   -- Unknown index keyword \newtheorem.
+!! Input index error (file = DOAFOA, line = 9):
+   -- Unknown index keyword \newtheorem.
+!! Input index error (file = DOAFOA, line = 10):
+   -- Unknown index keyword \newtheorem.
+!! Input index error (file = DOAFOA, line = 12):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 13):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 14):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 15):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 16):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 17):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 18):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 19):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 20):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 21):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 22):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 23):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 24):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 25):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 26):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 27):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 28):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 29):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 30):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 31):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 32):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 33):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 34):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 35):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 36):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 37):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 38):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 39):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 40):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 41):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 42):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 43):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 44):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 45):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 46):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 47):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 48):
+   -- Unknown index keyword \newcommand.
+!! Input index error (file = DOAFOA, line = 51):
+   -- Unknown index keyword \title.
+!! Input index error (file = DOAFOA, line = 53):
+   -- Unknown index keyword \author.
+!! Input index error (file = DOAFOA, line = 54):
+   -- Unknown index keyword \date.
+!! Input index error (file = DOAFOA, line = 55):
+   -- Unknown index keyword \pagestyle.
+!! Input index error (file = DOAFOA, line = 57):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 59):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 61):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 62):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 63):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 64):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 65):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 66):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 67):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 68):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 69):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 70):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 71):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 72):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 73):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 74):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 75):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 76):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 77):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 78):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 80):
+   -- Unknown index keyword \section.
+!! Input index error (file = DOAFOA, line = 81):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 82):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 83):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 84):
+   -- Unknown index keyword channelsandvariousmobilecommunicationsservices~\cite.
+!! Input index error (file = DOAFOA, line = 85):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 86):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 87):
+   -- Unknown index keyword processingtechnologies~\cite.
+!! Input index error (file = DOAFOA, line = 88):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 89):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 90):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 91):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 92):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 93):
+   -- Unknown index keyword estimation~\cite.
+!! Input index error (file = DOAFOA, line = 94):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 95):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 96):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 97):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 98):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 100):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 101):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 102):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 103):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 104):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 105):
+   -- Unknown index keyword vectorduetosearching~\cite.
+!! Input index error (file = DOAFOA, line = 106):
+   -- Unknown index keyword non-trivialpairingprocedures~\cite.
+!! Input index error (file = DOAFOA, line = 107):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 108):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 109):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 110):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 111):
+   -- Unknown index keyword poor~\cite.
+!! Input index error (file = DOAFOA, line = 112):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 113):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 114):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 115):
+   -- Unknown index keyword unattractive~\cite.
+!! Input index error (file = DOAFOA, line = 117):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 118):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 119):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 120):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 121):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 122):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 123):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 124):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 125):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 126):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 127):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 128):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 129):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 131):
+   -- Unknown index keyword \section.
+!! Input index error (file = DOAFOA, line = 133):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 134):
+   -- Unknown index keyword whichemitplanewavesignals,$s_.
+!! Input index error (file = DOAFOA, line = 135):
+   -- Unknown index keyword frequencies,$f_.
+!! Input index error (file = DOAFOA, line = 136):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 137):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 138):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 139):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 140):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 141):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 143):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 144):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 145):
+   -- Unknown index keyword r_m(t)&=&\sum\limits_.
+!! Input index error (file = DOAFOA, line = 146):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 147):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 148):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 150):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 151):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 152):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 153):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 154):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 156):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 157):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 158):
+   -- Unknown index keyword \br_T^.
+!! Input index error (file = DOAFOA, line = 159):
+   -- Unknown index keyword &=&\bA_T^.
+!! Input index error (file = DOAFOA, line = 160):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 161):
+   -- Unknown index keyword \label.
+!! Input index error (file = DOAFOA, line = 162):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 164):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 166):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 167):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 168):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 169):
+   -- Unknown index keyword =\bA_.
+!! Input index error (file = DOAFOA, line = 170):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 171):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 173):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 174):
+   -- Unknown index keyword samplesatthe$m.
+!! Input index error (file = DOAFOA, line = 175):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 176):
+   -- Unknown index keyword fromthetemporalsignalvector$\br_T^.
+!! Input index error (file = DOAFOA, line = 177):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 178):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 179):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 180):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 181):
+   -- Unknown index keyword (\ref.
+!! Input index error (file = DOAFOA, line = 182):
+   -- Unknown index keyword labeleda.
+!! Input index error (file = DOAFOA, line = 184):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 185):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 186):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 187):
+   -- Unknown index keyword \ba_S(f_K,\theta_K)]\hspace.
+!! Input index error (file = DOAFOA, line = 188):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 189):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 190):
+   -- Unknown index keyword \noindentofwhichthe$k.
+!! Input index error (file = DOAFOA, line = 191):
+   -- Unknown index keyword \theta_k)$,isthe.
+!! Input index error (file = DOAFOA, line = 192):
+   -- Unknown index keyword $k\mbox.
+!! Input index error (file = DOAFOA, line = 193):
+   -- Unknown index keyword $\mathbf.
+!! Input index error (file = DOAFOA, line = 194):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 196):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 197):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 198):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 199):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 200):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 202):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 204):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 205):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 206):
+   -- Unknown index keyword \ba_T(f_k)=[1\hspace.
+!! Input index error (file = DOAFOA, line = 207):
+   -- Unknown index keyword e^.
+!! Input index error (file = DOAFOA, line = 208):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 209):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 211):
+   -- Unknown index keyword \noindentisthe.
+!! Input index error (file = DOAFOA, line = 214):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 215):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 216):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 217):
+   -- Unknown index keyword \bS(t)&=&\mbox.
+!! Input index error (file = DOAFOA, line = 218):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 219):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 222):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 223):
+   -- Unknown index keyword matrixforthe$K$carriersignals,respectively.$\bn_T^.
+!! Input index error (file = DOAFOA, line = 224):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 225):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 227):
+   -- Unknown index keyword \section.
+!! Input index error (file = DOAFOA, line = 229):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 230):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 231):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 232):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 233):
+   -- Unknown index keyword called.
+!! Input index error (file = DOAFOA, line = 234):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 235):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 236):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 238):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 239):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 240):
+   -- Unknown index keyword \matrix.
+!! Input index error (file = DOAFOA, line = 241):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 242):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 244):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 245):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 246):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 248):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 249):
+   -- Unknown index keyword \bD_S=diag\.
+!! Input index error (file = DOAFOA, line = 250):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 251):
+   -- Unknown index keyword \label.
+!! Input index error (file = DOAFOA, line = 252):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 254):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 256):
+   -- Unknown index keyword Withthedefinitionsin(\ref.
+!! Input index error (file = DOAFOA, line = 257):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 258):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 260):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 261):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 262):
+   -- Unknown index keyword \bR_T^.
+!! Input index error (file = DOAFOA, line = 263):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 264):
+   -- Unknown index keyword \bR_T^.
+!! Input index error (file = DOAFOA, line = 265):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 266):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 267):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 269):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 270):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 273):
+   -- Unknown index keyword \subsection.
+!! Input index error (file = DOAFOA, line = 275):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 276):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 278):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 279):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 280):
+   -- Unknown index keyword \bR&=&\mathbf.
+!! Input index error (file = DOAFOA, line = 281):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 282):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 284):
+   -- Unknown index keyword \noindentwhere$\mathbf.
+!! Input index error (file = DOAFOA, line = 285):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 286):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 288):
+   -- Unknown index keyword Furthermore,whentheranksofmatrices$\mathbf.
+!! Input index error (file = DOAFOA, line = 289):
+   -- Unknown index keyword $\mathbf.
+!! Input index error (file = DOAFOA, line = 290):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 291):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 292):
+   -- Unknown index keyword $\mathbf.
+!! Input index error (file = DOAFOA, line = 294):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 295):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 296):
+   -- Unknown index keyword \bR\bA_T&=&\mathbf.
+!! Input index error (file = DOAFOA, line = 297):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 298):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 300):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 301):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 302):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 303):
+   -- Unknown index keyword Furthermore,wecanseethat,in(\ref.
+!! Input index error (file = DOAFOA, line = 304):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 305):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 306):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 307):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 308):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 310):
+   -- Unknown index keyword \subsection.
+!! Input index error (file = DOAFOA, line = 312):
+   -- Unknown index keyword Using(\ref.
+!! Input index error (file = DOAFOA, line = 313):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 314):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 315):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 316):
+   -- Unknown index keyword parametermatrix$\bR$definedin(\ref.
+!! Input index error (file = DOAFOA, line = 317):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 319):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 320):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 321):
+   -- Unknown index keyword \bR_.
+!! Input index error (file = DOAFOA, line = 322):
+   -- Unknown index keyword }&=&\min\limits_.
+!! Input index error (file = DOAFOA, line = 323):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 324):
+   -- Unknown index keyword \label.
+!! Input index error (file = DOAFOA, line = 325):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 327):
+   -- Unknown index keyword \noindentwhere$\hat.
+!! Input index error (file = DOAFOA, line = 328):
+   -- Unknown index keyword denotetheestimateof$.
+!! Input index error (file = DOAFOA, line = 329):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 331):
+   -- Unknown index keyword Here,itisassumedthat$\tilde.
+!! Input index error (file = DOAFOA, line = 332):
+   -- Unknown index keyword $\bar.
+!! Input index error (file = DOAFOA, line = 333):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 334):
+   -- Unknown index keyword $\tilde.
+!! Input index error (file = DOAFOA, line = 335):
+   -- Unknown index keyword Hence,theLSestimatewillinherentlybebiased~\cite.
+!! Input index error (file = DOAFOA, line = 336):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 337):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 338):
+   -- Unknown index keyword $\tilde.
+!! Input index error (file = DOAFOA, line = 339):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 340):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 343):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 344):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 345):
+   -- Unknown index keyword \bR_.
+!! Input index error (file = DOAFOA, line = 346):
+   -- Unknown index keyword \tilde.
+!! Input index error (file = DOAFOA, line = 347):
+   -- Unknown index keyword \right]-\left[\matrix.
+!! Input index error (file = DOAFOA, line = 348):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 349):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 351):
+   -- Unknown index keyword \noindentSolvingtheminimizationproblemin(\ref.
+!! Input index error (file = DOAFOA, line = 352):
+   -- Unknown index keyword inatotalleastsquaresestimateofthe$\bR$~\cite.
+!! Input index error (file = DOAFOA, line = 353):
+   -- Unknown index keyword whichmapsthecolumnsof$\tilde.
+!! Input index error (file = DOAFOA, line = 354):
+   -- Unknown index keyword $\hat.
+!! Input index error (file = DOAFOA, line = 355):
+   -- Unknown index keyword matrix,$\bR_.
+!! Input index error (file = DOAFOA, line = 357):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 358):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 359):
+   -- Unknown index keyword \bR_.
+!! Input index error (file = DOAFOA, line = 360):
+   -- Unknown index keyword TLS}&=&(\tilde.
+!! Input index error (file = DOAFOA, line = 361):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 362):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 364):
+   -- Unknown index keyword \noindentwhere$\sigma_.
+!! Input index error (file = DOAFOA, line = 365):
+   -- Unknown index keyword of$[\tilde.
+!! Input index error (file = DOAFOA, line = 367):
+   -- Unknown index keyword \subsection.
+!! Input index error (file = DOAFOA, line = 369):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 370):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 371):
+   -- Unknown index keyword correlationmatricesdefinedin(\ref.
+!! Input index error (file = DOAFOA, line = 372):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 373):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 375):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 376):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 377):
+   -- Unknown index keyword \hat.
+!! Input index error (file = DOAFOA, line = 378):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 379):
+   -- Unknown index keyword \hat.
+!! Input index error (file = DOAFOA, line = 380):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 381):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 383):
+   -- Unknown index keyword \noindentObviously,theestimatesin(\ref.
+!! Input index error (file = DOAFOA, line = 384):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 385):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 386):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 387):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 388):
+   -- Unknown index keyword $\mathbf.
+!! Input index error (file = DOAFOA, line = 389):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 391):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 392):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 393):
+   -- Unknown index keyword \mathbf.
+!! Input index error (file = DOAFOA, line = 394):
+   -- Unknown index keyword r_0^.
+!! Input index error (file = DOAFOA, line = 395):
+   -- Unknown index keyword r_0^.
+!! Input index error (file = DOAFOA, line = 396):
+   -- Unknown index keyword \vdots\\r_.
+!! Input index error (file = DOAFOA, line = 397):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 398):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 399):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 401):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 402):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 403):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 404):
+   -- Unknown index keyword r_p^.
+!! Input index error (file = DOAFOA, line = 405):
+   -- Unknown index keyword +r_m^y(t-lT_s)r_m^.
+!! Input index error (file = DOAFOA, line = 407):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 408):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 410):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 412):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 413):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 414):
+   -- Unknown index keyword \mathbf.
+!! Input index error (file = DOAFOA, line = 415):
+   -- Unknown index keyword r_.
+!! Input index error (file = DOAFOA, line = 416):
+   -- Unknown index keyword \cdots&r_.
+!! Input index error (file = DOAFOA, line = 417):
+   -- Unknown index keyword r_.
+!! Input index error (file = DOAFOA, line = 418):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 419):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 420):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 422):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 424):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 425):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 426):
+   -- Unknown index keyword r_q^.
+!! Input index error (file = DOAFOA, line = 427):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 428):
+   -- Unknown index keyword r_.
+!! Input index error (file = DOAFOA, line = 429):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 430):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 432):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 434):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 435):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 436):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 437):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 438):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 440):
+   -- Unknown index keyword \section.
+!! Input index error (file = DOAFOA, line = 442):
+   -- Unknown index keyword \subsection.
+!! Input index error (file = DOAFOA, line = 444):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 445):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 446):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 447):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 448):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 449):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 450):
+   -- Unknown index keyword inthematrices$\bar.
+!! Input index error (file = DOAFOA, line = 451):
+   -- Unknown index keyword $\bR$~\cite.
+!! Input index error (file = DOAFOA, line = 453):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 454):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 455):
+   -- Unknown index keyword \Delta\bR&\approx&\bar.
+!! Input index error (file = DOAFOA, line = 456):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 457):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 459):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 460):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 461):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 464):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 465):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 466):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 467):
+   -- Unknown index keyword -j.
+!! Input index error (file = DOAFOA, line = 468):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 469):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 472):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 474):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 475):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 476):
+   -- Unknown index keyword \Delta\theta_i\approx-j.
+!! Input index error (file = DOAFOA, line = 477):
+   -- Unknown index keyword f_id\cos\theta_i}\bv_i^H\bar.
+!! Input index error (file = DOAFOA, line = 478):
+   -- Unknown index keyword \hspace.
+!! Input index error (file = DOAFOA, line = 479):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 480):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 482):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 483):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 484):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 485):
+   -- Unknown index keyword $\bW=\mbox.
+!! Input index error (file = DOAFOA, line = 486):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 487):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 489):
+   -- Unknown index keyword \subsection.
+!! Input index error (file = DOAFOA, line = 491):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 492):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 493):
+   -- Unknown index keyword $\mathbf.
+!! Input index error (file = DOAFOA, line = 494):
+   -- Unknown index keyword \btheta^.
+!! Input index error (file = DOAFOA, line = 495):
+   -- Unknown index keyword \left\.
+!! Input index error (file = DOAFOA, line = 496):
+   -- Unknown index keyword \right\}$,$\btheta=\left[\theta_.
+!! Input index error (file = DOAFOA, line = 497):
+   -- Unknown index keyword \theta_.
+!! Input index error (file = DOAFOA, line = 498):
+   -- Unknown index keyword \right]^.
+!! Input index error (file = DOAFOA, line = 500):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 501):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 502):
+   -- Unknown index keyword {\rmFIM}&=&.
+!! Input index error (file = DOAFOA, line = 503):
+   -- Unknown index keyword \frac.
+!! Input index error (file = DOAFOA, line = 504):
+   -- Unknown index keyword \frac.
+!! Input index error (file = DOAFOA, line = 505):
+   -- Unknown index keyword \label.
+!! Input index error (file = DOAFOA, line = 506):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 507):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 509):
+   -- Unknown index keyword \noindentwhere,withthedatamodelin(\ref.
+!! Input index error (file = DOAFOA, line = 510):
+   -- Unknown index keyword (\ref.
+!! Input index error (file = DOAFOA, line = 511):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 513):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 514):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 515):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 516):
+   -- Unknown index keyword L&=&C-LMK\ln\sigma^2-\frac.
+!! Input index error (file = DOAFOA, line = 517):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 518):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 520):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 521):
+   -- Unknown index keyword $\mathbf.
+!! Input index error (file = DOAFOA, line = 523):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 524):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 526):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 527):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 528):
+   -- Unknown index keyword \mathbf.
+!! Input index error (file = DOAFOA, line = 529):
+   -- Unknown index keyword P}}^.
+!! Input index error (file = DOAFOA, line = 530):
+   -- Unknown index keyword Q}}-.
+!! Input index error (file = DOAFOA, line = 531):
+   -- Unknown index keyword O}}^T]^.
+!! Input index error (file = DOAFOA, line = 532):
+   -- Unknown index keyword \mathbf.
+!! Input index error (file = DOAFOA, line = 533):
+   -- Unknown index keyword O}}.
+!! Input index error (file = DOAFOA, line = 534):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 535):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 537):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 539):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 540):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 541):
+   -- Unknown index keyword {\mathbf.
+!! Input index error (file = DOAFOA, line = 542):
+   -- Unknown index keyword O}}&=&\mathbf.
+!! Input index error (file = DOAFOA, line = 543):
+   -- Unknown index keyword B}_.
+!! Input index error (file = DOAFOA, line = 544):
+   -- Unknown index keyword P}}&=&\mathbf.
+!! Input index error (file = DOAFOA, line = 545):
+   -- Unknown index keyword B}_.
+!! Input index error (file = DOAFOA, line = 546):
+   -- Unknown index keyword {\mathbf.
+!! Input index error (file = DOAFOA, line = 547):
+   -- Unknown index keyword Q}}&=&\mathbf.
+!! Input index error (file = DOAFOA, line = 548):
+   -- Unknown index keyword B}_.
+!! Input index error (file = DOAFOA, line = 549):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 550):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 553):
+   -- Unknown index keyword \noindentandthe$\bLambda$'s,$\bB$'sand$\mathbf.
+!! Input index error (file = DOAFOA, line = 554):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 556):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 557):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 558):
+   -- Unknown index keyword \mathbf.
+!! Input index error (file = DOAFOA, line = 559):
+   -- Unknown index keyword \mathbf.
+!! Input index error (file = DOAFOA, line = 560):
+   -- Unknown index keyword \mathbf.
+!! Input index error (file = DOAFOA, line = 561):
+   -- Unknown index keyword \mathbf.
+!! Input index error (file = DOAFOA, line = 562):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 563):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 565):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 566):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 567):
+   -- Unknown index keyword \matrix.
+!! Input index error (file = DOAFOA, line = 568):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 569):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 572):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 573):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 574):
+   -- Unknown index keyword \matrix.
+!! Input index error (file = DOAFOA, line = 575):
+   -- Unknown index keyword \matrix.
+!! Input index error (file = DOAFOA, line = 576):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 577):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 578):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 581):
+   -- Unknown index keyword \section.
+!! Input index error (file = DOAFOA, line = 583):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 584):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 585):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 586):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 587):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 588):
+   -- Unknown index keyword $(+30^.
+!! Input index error (file = DOAFOA, line = 589):
+   -- Unknown index keyword $(-60^.
+!! Input index error (file = DOAFOA, line = 590):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 591):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 592):
+   -- Unknown index keyword (\ref.
+!! Input index error (file = DOAFOA, line = 594):
+   -- Unknown index keyword \subsection*.
+!! Input index error (file = DOAFOA, line = 596):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 597):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 598):
+   -- Unknown index keyword \includegraphics[width=3in].
+!! Input index error (file = DOAFOA, line = 599):
+   -- Unknown index keyword \caption.
+!! Input index error (file = DOAFOA, line = 600):
+   -- Unknown index keyword $N$=500,$L$=5,$K$=4.}\label.
+!! Input index error (file = DOAFOA, line = 601):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 602):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 604):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 605):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 606):
+   -- Unknown index keyword \includegraphics[width=3in].
+!! Input index error (file = DOAFOA, line = 607):
+   -- Unknown index keyword \caption.
+!! Input index error (file = DOAFOA, line = 608):
+   -- Unknown index keyword $N$=500,$L$=5,$K$=4.}\label.
+!! Input index error (file = DOAFOA, line = 609):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 610):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 612):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 613):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 614):
+   -- Unknown index keyword oftheDOA/FOAestimationofthesignalsource($+30^.
+!! Input index error (file = DOAFOA, line = 615):
+   -- Unknown index keyword $5.5MHz$)arecalculatedandshowninFigs.\ref.
+!! Input index error (file = DOAFOA, line = 616):
+   -- Unknown index keyword \ref.
+!! Input index error (file = DOAFOA, line = 617):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 618):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 620):
+   -- Unknown index keyword \subsection*.
+!! Input index error (file = DOAFOA, line = 623):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 624):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 625):
+   -- Unknown index keyword \includegraphics[width=3in].
+!! Input index error (file = DOAFOA, line = 626):
+   -- Unknown index keyword \caption.
+!! Input index error (file = DOAFOA, line = 627):
+   -- Unknown index keyword $SNR$=10dB.}\label.
+!! Input index error (file = DOAFOA, line = 628):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 629):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 631):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 632):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 633):
+   -- Unknown index keyword \includegraphics[width=3in].
+!! Input index error (file = DOAFOA, line = 634):
+   -- Unknown index keyword \caption.
+!! Input index error (file = DOAFOA, line = 635):
+   -- Unknown index keyword $SNR$=10dB.}\label.
+!! Input index error (file = DOAFOA, line = 636):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 637):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 639):
+   -- Unknown index keyword InFigs.\ref.
+!! Input index error (file = DOAFOA, line = 640):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 641):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 642):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 643):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 645):
+   -- Unknown index keyword \subsection*.
+!! Input index error (file = DOAFOA, line = 647):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 648):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 649):
+   -- Unknown index keyword \includegraphics[width=3in].
+!! Input index error (file = DOAFOA, line = 650):
+   -- Unknown index keyword \caption.
+!! Input index error (file = DOAFOA, line = 651):
+   -- Unknown index keyword $SNR$=10dB.}\label.
+!! Input index error (file = DOAFOA, line = 652):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 653):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 655):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 656):
+   -- Unknown index keyword \begin.
+!! Input index error (file = DOAFOA, line = 657):
+   -- Unknown index keyword \includegraphics[width=3in].
+!! Input index error (file = DOAFOA, line = 658):
+   -- Unknown index keyword \caption.
+!! Input index error (file = DOAFOA, line = 659):
+   -- Unknown index keyword $SNR$=10dB.}\label.
+!! Input index error (file = DOAFOA, line = 660):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 661):
+   -- Unknown index keyword \end.
+!! Input index error (file = DOAFOA, line = 663):
+   -- Unknown index keyword InFigs.\ref.
+!! Input index error (file = DOAFOA, line = 664):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 665):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 666):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 667):
+   -- Unknown index keyword increasethesamplingnumber$K$inEq.\ref.
+!! Input index error (file = DOAFOA, line = 668):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 669):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 671):
+   -- Unknown index keyword \section.
+!! Input index error (file = DOAFOA, line = 673):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 674):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 675):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 676):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 677):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 678):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 679):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 681):
+   -- Missing arguments -- need two (premature LFD).
+!! Input index error (file = DOAFOA, line = 682):
+   -- Unknown index keyword \bibliographystyle.
+!! Input index error (file = DOAFOA, line = 683):
+   -- Unknown index keyword \bibliography.
+!! Input index error (file = DOAFOA, line = 684):
+   -- Unknown index keyword \end.
+done (0 entries accepted, 568 rejected).
+Nothing written in DOAFOA.ind.
+Transcript written in DOAFOA.ilg.

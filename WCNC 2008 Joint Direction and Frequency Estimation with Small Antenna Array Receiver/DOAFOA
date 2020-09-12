@@ -1,0 +1,684 @@
+\documentclass[a4paper,10pt,fleqn, twocolumn]{IEEEtran}
+
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+
+\newtheorem{Prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{Proof}{proof}
+
+\newcommand{\br}{{\mathbf r}}
+\newcommand{\bA}{{\mathbf A}}
+\newcommand{\ba}{{\bf a}}
+\newcommand{\bb}{{\bf b}}
+\newcommand{\bs}{{\bf s}}
+\newcommand{\bn}{{\bf n}}
+\newcommand{\bv}{{\bf v}}
+\newcommand{\bu}{{\bf u}}
+\newcommand{\bw}{{\bf w}}
+\newcommand{\bx}{{\bf x}}
+\newcommand{\by}{{\bf y}}
+\newcommand{\bbf}{{\bf f}}
+\newcommand{\bS}{{\bf S}}
+\newcommand{\bN}{{\bf N}}
+\newcommand{\bD}{{\bf D}}
+\newcommand{\bX}{{\bf X}}
+\newcommand{\bY}{{\bf Y}}
+\newcommand{\bZ}{{\bf Z}}
+\newcommand{\bP}{{\bf P}}
+\newcommand{\bI}{{\bf I}}
+\newcommand{\bR}{{\bf R}}
+\newcommand{\bU}{{\bf U}}
+\newcommand{\bV}{{\bf V}}
+\newcommand{\bW}{{\bf W}}
+\newcommand{\bJ}{{\bf J}}
+\newcommand{\bB}{{\bf B}}
+\newcommand{\bcS}{{\bf {\cal S}}}
+\newcommand{\bcH}{{\bf {\cal H}}}
+\newcommand{\bzero}{{\bf 0}}
+\newcommand{\bgamma}{{\mbox {\boldmath $r$}}}
+\newcommand{\btheta}{{\mbox {\boldmath $\theta$}}}
+\newcommand{\bLambda}{{\mbox {\boldmath $\Lambda$}}}
+\newcommand{\bPsi}{{\mbox {\boldmath $\Psi$}}}
+\newcommand{\bPhi}{{\mbox {\boldmath $\Phi$}}}
+\newcommand{\bcI}{{\mbox {\boldmath ${\cal I}$}}}
+\newcommand{\bcR}{{\mbox {\boldmath ${\cal R}$}}}
+\newcommand{\bcB}{{\mbox {\boldmath ${\cal B}$}}}
+
+
+\title{\huge Joint Direction and Frequency Estimation Using Small Receiver Arrays}
+
+\author{{Shu Wang, James Caffery, Jr. and Hanhong Shen} \\ Department of ECECS \\ University of Cincinnati \\Cincinnati, OH 45221-0030}
+\date{}
+\pagestyle{plain}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+In this paper, we examine several high-resolution subspace
+algorithms for joint direction-of-arrival (DOA) and
+frequency-of-arrival (FOA) estimation using a small ESPRIT
+receiver, the physical size of which can be smaller than the
+number of incoming signals. We modify the classic ESPRIT algorithm
+so that the direction and frequency of each incoming signal can be
+jointly obtained from the eigenvalue and eigenvector pair of a
+special signal parameter matrix. No additional searching procedure
+or pairing scheme is required. Furthermore, with analysis of the
+employed correlation matrices, both space-time processing and
+total least squares (TLS) improvement schemes are given. In
+addition to the Cram\'er-Rao lower bound (CRLB), first-order
+approximations of the asymptotic mean squared error in the
+estimates are also derived for all the proposed methods. Computer
+simulations are presented to demonstrate the performance of the
+proposed schemes.
+\end{abstract}
+
+\section{Introduction}
+The application of antenna arrays is expected to overcome the
+problem of limited channel bandwidth, thereby fulfilling the
+increased demands for a large number of mobiles on communication
+channels and various mobile communications services~\cite{Rapp96}.
+In wireless communication systems, one can also obtain better
+channel estimates and improve system performance with array signal
+processing technologies~\cite{Chen99}. In these applications,
+high-resolution signal parameter estimation, e.g., DOA/FOA
+estimation, within the output data of an array of sensors at
+different points in space and/or time in a wave-field is
+frequently studied. Roy et al. proposed a patented subspace
+rotation approach, ESPRIT, for signal parameter
+estimation~\cite{Paul85,Roy86}, which can be employed to find the
+direction or frequency in a computationally efficient manner. It
+is search-free and fairly robust without using array calibration
+information, and has been found to be competitive with many other
+algorithms, with its performance is close to the calibrated
+Cram\'er-Rao lower bound for many cases of practical interest.
+
+Though generalization of many so-called high-resolution one
+dimensional (1D) algorithms to two-dimensional (2D) cases are
+relatively straightforward, the main difficulty associated with
+these methods is that both computation and storage costs tend to
+increase rapidly with the number of dimensions of the parameter
+vector due to searching~\cite{Zolt96,Wong97,Bro98} and/or
+non-trivial pairing procedures~\cite{Chen92,Veen92,Kedi96}. Since
+those high-resolution 2D methods give a considerably higher
+computational cost, many systems employ non-parametric techniques
+in practice, e.g., beam-forming. Though these classical techniques
+are less complicated, their performance is known to be
+poor~\cite{Goda97}. Additionally, most modern high-resolution
+techniques require that the size of the antenna array must be
+greater than the number of tracked signal sources. This, in turn,
+may further render the applicability of these techniques
+unattractive~\cite{Wang98}.
+
+In this paper, we propose joint direction and frequency estimation
+algorithms for small ESPRIT array systems, which consist of
+doublets and the size of which is less than the number of incoming
+signals. These proposed algorithms are simple and direct with no
+additional search or pairing procedure. Furthermore, thorough
+analysis of the employed correlation matrices, a space-time
+processing improvement scheme and a TLS estimation scheme are
+proposed to improve the performance of the proposed algorithms. In
+addition to the CRLB, the calculation of the first-order
+approximation of estimation errors for all the proposed algorithms
+are also presented. Finally, computer simulation results and
+comparisons are presented to demonstrate the performance of the
+proposed schemes.
+
+\section{Space-Time Array Data Model}
+
+Assume there are $K$ uncorrelated narrow-band radiating sources
+which emit plane wave signals, $s_{k}(t)$, with different center
+frequencies, $f_{k}$, from distinct directions, $\theta_{k}$,
+$k=1$, $2$, $\ldots$, $K$, corrupted by a additive Gaussian white
+noise (AWGN) with variance, $\sigma^2$, at the array receiver. We
+assume that the plane waves and additive noise are stationary
+zero-mean processes and uncorrelated from sensor to sensor. The
+complex form of the observed signal, $r_m(t)$, at the $m$th
+antenna element of the array can be expressed as
+
+\begin{equation}
+\begin{array}{rcl}
+r_m(t)&=&\sum\limits_{k=1}^Ka_m(f_k,\ \theta_k)s_k(t)e^{-j2\pi
+f_kt}+n_m(t)
+\end{array}\label{ScaleModel}
+\end{equation}
+
+\noindent where $a_m(f_k,\ \theta_k)$ is the complex response
+(gain and phase) of antenna $m$ at frequency $f_k$ and direction
+$\theta_k$, $s_k(t)$ is the narrow-band signal and the size of
+array receiver is $M$. The observed array signal samples can be
+further expressed in vector and matrix form as
+
+\begin{equation}
+\begin{array}{rcl}
+\br_T^{m}(t)&=&[r_m(t)\ r_m(t+T_s)\ \ldots\ r_m(t+(L-1)T_s)]^T\\
+&=&\bA_T^{\ast}\bs(t)+\bn_T^{m}(t)\hspace{0.1in}
+\end{array}
+\label{VectorModelT}
+\end{equation}
+
+\noindent and
+
+\begin{equation}
+\begin{array}{c}
+\bcR(t)=[\br_T^1(t)\ \br_T^2(t)\ \ldots\ \br_T^M(t)]^T
+=\bA_{S}\bS(t)\bA_{T}^{H}+\bN(t)
+\end{array} \label{MatrixModel}
+\end{equation}
+
+\noindent where $\br_T^m(t)$ is obtained by taking $L$ consecutive
+samples at the $m{\mbox{th}}$ antenna. The $M\times L$ matrix
+$\bcR(t)$ is the received signal matrix, which can be constructed
+from the temporal signal vector $\br_T^{m}(t)$. The parameter
+$T_s=1/f_s$ denotes the inverse of the sampling frequency, $f_s$,
+$[\cdot]^\ast$ denotes the complex conjugate operation,
+$[\cdot]^T$ denotes the transpose operation and $[\cdot]^H$
+denotes the complex conjugate transpose operation. In
+(\ref{MatrixModel}), the $M\times K$ matrix $\mathbf{A}_S$ is
+labeled a {\em spatial steering matrix} and can be written as
+
+\begin{equation}
+\begin{array}{rcl}
+\bA_S & = & [\ba_S(f_1,\theta_1)\ \ba_S(f_2,\theta_2)\ \ldots\
+\ba_S(f_K,\theta_K)]\hspace{0.1in}
+\end{array}
+\end{equation}
+\noindent of which the $k{th}$ column, $\mathbf{a}_S(f_k,\
+\theta_k)$, is the {\em spatial steering vector} for the
+$k\mbox{th}$ arriving wave-front. Likewise, the $L\times K$ matrix
+$\mathbf{A}_T$ is labeled a {\em temporal steering matrix} and is
+written as
+
+\begin{equation}
+\begin{array}{rcl}
+\bA_T&=&[ \ba_T(f_1)\ \ba_T(f_2)\ \ldots\ \ba_T(f_K)]
+\end{array}
+\end{equation}
+
+\noindent of which the $k$th column
+
+\begin{equation}
+\begin{array}{l}
+\ba_T(f_k)=[1\hspace{0.1in}e^{j2\pi f_k/f_s}\hspace{0.1in}
+e^{j4\pi f_k/f_s}\hspace{0.1in}\ldots\ e^{j2\pi (L-1)f_k/f_s}]^T
+\end{array}\label{a_T}
+\end{equation}
+
+\noindent is the {\em temporal steering vector}. The parameters
+
+
+\begin{equation}
+\begin{array}{rcl}
+\bs(t)&=&[s_1(t),\ s_2(t),\ \ldots,\ s_K(t)]^T\  \\ \\
+\bS(t)&=&\mbox{diag}\{s_1(t),\ s_2(t),\ \ldots,\ s_K(t)\}
+\end{array}
+\end{equation}
+
+
+\noindent are the $K\times 1$ vector and $K\times K$ diagonal
+matrix for the $K$ carrier signals, respectively. $\bn_T^{m}(t)$
+and $\bN(t)$ are the corresponding $L\times 1$ noise vector and
+$M\times L$ noise matrix, respectively.
+
+\section{Joint DOA/FOA Estimation Using ESPRIT}
+
+We assume that there is a simple uncalibrated ESPRIT array
+consisting of two subsarrys $\cal X$ and $\cal Y$ of the same size
+$M$. They are identical and separated by a fixed distance $d$.
+Each pair of identical elements of these two subarrays may be
+called {\em doublet}. The directional gain and phase response of
+these doublets may be completely different. The relationship
+between the carrier signals received by each doublet is expressed
+as
+
+\begin{equation}
+\begin{array}{rcl}
+\matrix{\bS^x(t)&=&\bS^y(t)\bD_S}
+\end{array}
+\end{equation}
+
+\noindent where $\bS^x(t)$ and $\bS^y(t)$, respectively, denote
+the signal matrix $\bS(t)$ received by subarray $\cal X$ and $\cal
+Y$ at time $t$ and
+
+\begin{equation}
+\bD_S=diag\{\matrix{e^{j2\pi f_1d\sin\theta_1/c}&\ldots&e^{j2\pi
+f_Kd\sin\theta_K/c}}\}
+ \label{D_S}
+\end{equation}
+
+\noindent denotes the spatial rotation diagonal matrix.
+
+With the definitions in (\ref{MatrixModel}), the time-domain
+correlation matrices of the outputs of subarray $\cal X$ and $\cal
+Y$ can be constructed as
+
+\begin{equation}
+\begin{array}{l}
+\bR_T^{xx}=\frac{1}{M}E\{\bX^{H}(t)\bX(t)\}
+=\bA_T\bP_s\bA_T^H+\sigma^2\bI\  \\ \\
+\bR_T^{yx}=\frac{1}{M}E\{\bY^{H}(t)\bX(t)\}
+=\bA_T\bP_s\bD_S\bA_T^H
+\end{array} \label{CorrelationXY}   \label{CorrelationXX}
+\end{equation}
+
+\noindent where $\bX$ and $\bY$ denote the signal matrix $\bcR$
+received by subarray $\cal X$ and $\cal Y$, respectively.
+
+
+\subsection{Least Squares Estimation}
+
+In order to estimate the DOA and FOA simultaneously, we define a
+special signal parameter matrix $\bR$ as
+
+\begin{equation}
+\begin{array}{rcccl}
+\bR&=&\mathbf{\bar{R}}_T^{xx+}\bR_T^{yx}&=&(\bR_T^{xx}-\sigma^2\bI)^+\bR_T^{yx}
+\end{array}\label{RLS}
+\end{equation}
+
+\noindent where $\mathbf{\bar{R}}_T^{xx}=\bR_T^{xx}-\sigma^2\bI$
+is the correlation matrix of subarray $\cal X$ or $\cal Y$ without
+noise.
+
+Furthermore, when the ranks of matrices $\mathbf{A}_T$ and
+$\mathbf{P}_s$ are $K$, the $k$th column of the temporal steering
+matrix is the eigenvector of the signal parameter matrix, which
+corresponds to the $k$th diagonal element of the diagonal matrix
+$\mathbf{D}_S$. This can be expressed as
+
+\begin{equation}
+\begin{array}{rll}
+\bR\bA_T&=&\mathbf{A}_T\mathbf{D}_S\hspace{0.1in}.
+\end{array}\label{LS}
+\end{equation}
+
+Finally, the frequency and direction of each signal source can be
+estimated from one pair of an eigenvector and a nonzero
+eigenvalue. As a result, they are automatically coupled.
+Furthermore, we can see that, in (\ref{RLS}), the size of the
+square matrix $\bR$ is $M$, which can be set to an arbitrary
+number regardless of the physical array size. This means that even
+with a single doublet, it is still possible to estimate as many
+incoming signals as desired, provided that there are enough array
+measurements available.
+
+\subsection{Total Least Squares Estimation}
+
+Using (\ref{RLS}) and (\ref{LS}), the direction and frequency of
+each incoming signal source can be jointly estimated without any
+additional search or pairing procedure. No knowledge of the
+subarray responses is required, either. In fact, the signal
+parameter matrix $\bR$ defined in (\ref{RLS}) is the least squares
+solution to the following optimization problem:
+
+\begin{equation}
+\begin{array}{rcl}
+\bR_{\rm LS
+}&=&\min\limits_{\bZ}\left\|\hat{\bR}_{T}^{yx}-\tilde{\bR}_{T}^{xx}\bZ\right\|_2
+\end{array}
+\label{LS1}
+\end{equation}
+
+\noindent where $\hat{\bR}_{T}^{yx}$ and $\tilde{\bR}_{T}^{xx}$
+denote the estimate of ${\bR}_{T}^{yx}$ and $\bar{\bR}_{T}^{xx}$,
+respectively.
+
+Here, it is assumed that $\tilde{\bR}_{T}^{xx}$ is equal to
+$\bar{\bR}_{T}^{xx}$. This is not always true, though they may be
+very close. Given noisy measurements, both the estimated matrix
+$\tilde{\bR}_{T}^{xx}$ and $\hat{\bR}_{T}^{yx}$ contain errors.
+Hence, the LS estimate will inherently be biased~\cite{Huff91}. It
+seems reasonable to treat the uncertainties in the matrices
+symmetrically. In order to utilize both information from
+$\tilde{\bR}_{T}^{xx}$ and $\hat{\bR}_{T}^{yx}$, the following
+optimization problem is presented to estimate the signal parameter
+matrix $\bR$:
+
+
+\begin{equation}
+\begin{array}{rcl}
+\bR_{\rm TLS}&=&\min\limits_{\bZ}\left\| \left[ \matrix{
+\tilde{\bR}_{T}^{xx}\cr \hat{\bR}_{T}^{yx}}
+\right]-\left[\matrix{\bar{\bR}_{T}^{xx}\cr\bar{\bR}_{T}^{xx}\bZ}\right]\right\|_2
+\end{array}\ .\label{TLS}
+\end{equation}
+
+\noindent Solving the minimization problem in (\ref{TLS}) results
+in a total least squares estimate of the $\bR$~\cite{Huff91},
+which maps the columns of $\tilde{\bR}_{T}^{xx}$ onto those of
+$\hat{\bR}_{T}^{yx}$. The TLS estimate of the signal parameter
+matrix, $\bR_{\rm TLS}$, can be presented as
+
+\begin{equation}
+\begin{array}{rcl}
+\bR_{\rm
+TLS}&=&(\tilde{\bR}_{T}^{xxT}\tilde{\bR}_{T}^{xx}-\sigma_{K+1}^2\bI)^{+}\tilde{\bR}_{T}^{xxT}\hat{\bR}_{T}^{yx}
+\end{array}
+\end{equation}
+
+\noindent where $\sigma_{K+1}$ is the $(K+1)$st largest eigenvalue
+of $[\tilde{\bR}_{T}^{xxT}\ \hat{\bR}_{T}^{yx}]$.
+
+\subsection{Space-Time Processing Improvement}
+
+It is clear that it is very important to obtain accurate estimates
+of the correlation matrices in the subspace algorithms. The
+correlation matrices defined in (\ref{CorrelationXX}) can be
+directly estimated with time-domain averaging. This can be
+expressed as
+
+\begin{equation}
+\begin{array}{rcl}
+\hat{\mathbf{R}}_T^{xx}&=&\frac{1}{MN}\sum\limits_{n=1}^{N}\bX(t-nT_s)\bX^{H}(t-nT_s)\\
+\\
+\hat{\mathbf{R}}_T^{yx}&=&\frac{1}{MN}\sum\limits_{n=1}^{N}\bX(t-nT_s)\bY^{H}(t-nT_s).
+\end{array}\label{estimatedRXX}\label{estimatedRYX}
+\end{equation}
+
+\noindent Obviously, the estimates in (\ref{estimatedRXX}) only
+utilize the property of the received signal that it is stationary
+in the time-domain, though the received signal $r_m(t)$ is also
+assumed to be stationary in the space-domain. Hence, when $r_i(t)$
+is stationary both in space and time, the matrices
+$\mathbf{R}_T^{xx}$ and $\mathbf{R}_T^{yx}$ are Toeplitz matrices
+and can be estimated by
+
+\begin{equation}
+\begin{array}{l}
+\mathbf{R}_T^{xx}=\mathbf{R}_T^{xxH}=\left[\begin{array}{cccc}
+r_0^{xx} & r_1^{xx\ast} & \cdots & r_{L-1}^{xx\ast}\\ r_1^{xx} &
+r_0^{xx} & \cdots & r_{L-2}^{xx\ast}\\ \vdots & \vdots & \ddots &
+\vdots\\ r_{L-1}^{xx} & r_{L-2}^{xx} & \cdots & r_0^{xx}
+\end{array}\right]
+\end{array}
+\end{equation}
+
+\noindent where
+\begin{equation}
+\begin{array}{r}
+r_p^{xx}=\frac{1}{2M(L-p)}\sum\limits_{m=1}^{M}\sum\limits_{l=1}^{L-p}\mbox{E}\{r_m^x(t-lT_s)r_m^{x\ast}(t-(l+p)T_s)\\
++r_m^y(t-lT_s)r_m^{y\ast}(t-(l+p)T_s)\}
+
+\end{array}
+\end{equation}
+
+\noindent $p=0$, $1$, $\ldots$, $L-1$, and
+
+\begin{equation}
+\begin{array}{rll}
+\mathbf{R}_T^{yx}&=&\left[\begin{array}{cccc} r_0^{yx} &
+r_{-1}^{yx} & \cdots & r_{-L+1}^{yx}\\ r_1^{yx} & r_0^{yx} &
+\cdots & r_{-L+2}^{yx}\\ \vdots & \vdots & \ddots & \vdots\\
+r_{L-1}^{yx} & r_{L-2}^{yx} & \cdots & r_0^{yx}
+\end{array}\right]
+\end{array}
+\end{equation}
+
+\noindent where
+
+\begin{equation}
+\begin{array}{l}
+r_q^{yx}=\frac{1}{M(L-q)}\sum\limits_{m=1}^{M}\sum\limits_{l=1}^{L-q}\mbox{E}\{r_m^{y\ast}(t-(l+q)T_s)r_m^x(t-lT_s)\}\\
+\\
+r_{-q}^{yx}=\frac{1}{M(L-q)}\sum\limits_{m=1}^{M}\sum\limits_{l=1}^{L-q}\mbox{E}\{r_m^{y\ast}(t-lT_s)r_m^x(t-(l+q)T_s)\}
+\end{array}
+\end{equation}
+
+\noindent $q=0$, $1$, $\ldots$, $L-1$.
+
+The above space-time joint averaging on the collected data should
+improve the estimate of the correlation matrices which should be
+much closer to the theoretical values. Thus, it is expected that
+the performance of the proposed joint DOA/FOA estimation algorithm
+is improved as well.
+
+\section{Performance Analysis}
+
+\subsection{Analysis of Estimation Errors}
+
+It is not easy to give a close-form expression for the proposed
+DOA/FOA estimation schemes which extend the classic ESPRIT
+algorithm since the directions and frequencies are directly
+associated with the eigenvalues and eigenvectors of the matrix
+$\bR$. But we know that in both the LS and TLS estimates of the
+matrix $\bR$, the following expression holds regarding the errors
+in the matrices $\bar{\bR}_T^{xx}$, $\bR_T^{yx}$ and
+$\bR$~\cite{Rao89}:
+
+\begin{equation}
+\begin{array}{rcl}
+\Delta\bR&\approx&\bar{\bR}_T^{xx+}\left(\Delta\bR_T^{yx}-\Delta\bar{\bR}_T^{xx}\bR\right)\hspace{0.1in}.
+\end{array}\label{DeltaR}
+\end{equation}
+
+\noindent When $\|\Delta\bR\|$ is very small, we can give the
+following first-order approximation of the errors in $f_i$,
+$\theta_i$, $i=1$, $2$, $\ldots$, $K$.
+
+
+\begin{equation}
+\begin{array}{l}
+\Delta f_i\approx
+-j{3f_s\over\pi(L-1)L(2L-1)}\ba_i^H\bW(\bR-\lambda_i\bI)^{+}(\Delta\lambda_i\bI-\Delta\bR)\ba_i
+\end{array}\label{approx_theta}
+\end{equation}
+
+
+\noindent and
+
+\begin{equation}
+\begin{array}{l}
+\Delta\theta_i \approx -j{c\over 2\pi
+f_id\cos\theta_i}\bv_i^H\bar{\bR}_T^{xx+}\left(\Delta\bR_T^{yx}-\lambda_i\Delta\bar{\bR}_T^{xx}\right)\bu_i\\
+\hspace{0.3in}+j{3f_s\tan\theta_i\over\pi(L-1)L(2L-1)f_i}\ba_i^H\bW(\bR-\lambda_i\bI)^{+}(\Delta\lambda_i\bI-\Delta\bR)\ba_i,
+\end{array}\label{approx_f}
+\end{equation}
+
+\noindent where $\lambda_i$, $\bv_i$ and $\bu_i$ denote the $i$th
+eigenvalue, and the left- and right-eigenvector of $\bR$,
+respectively, $\ba_i$ denotes the steering vector $\ba_T(f_i)$,
+$\bW=\mbox{diag}\left\{0,\ 1,\ \ldots,\ (L-1)\right\}$, $j$
+denotes the imaginary unit and $\Delta\cdot$ denotes the error in
+a scalar, vector or matrix.
+
+\subsection{Cram\'{e}r-Rao Lower Bound}
+
+The CRLB is given by the inverse of the Fisher information matrix
+(FIM). To compute the FIM, we first define the parameter vector
+$\mathbf{\phi} = \left[\sigma^{2}, \bs_{R}^{T}, \bs_{I}^{T},
+\btheta^{T}, \bbf^{T} \right]^{T}$, where $\bs_{R}(t) = {\Re}
+\left\{ \bs(t) \right\}$, $\bs_{I}(t) = {\Im}\left\{ \bs(t)
+\right\}$, $\btheta = \left[ \theta_{1}, \ldots,
+\theta_{K}\right]^{T}$, and $\bbf = \left[ f_{1}, \ldots, f_{K}
+\right]^{T}$.   Then, the FIM is defined to be
+
+\begin{equation}
+\begin{array}{rcccl}
+{\rm FIM}&=&{\rm CRLB}^{-1} & =& {\rm E} \left\{ \left(
+\frac{\partial \ln L}{\partial \mathbf{\phi}} \right) \left(
+\frac{\partial \ln L}{\partial \mathbf{\phi}} \right)^{H} \right\}
+\label{fim}
+\end{array}
+\end{equation}
+
+\noindent where, with the data model in (\ref{VectorModelT}) and
+(\ref{MatrixModel}), $\ln L$ is the log-likelihood function given
+by
+
+\begin{equation}
+\begin{array}{rcl}
+\ln
+L&=&C-LMK\ln\sigma^2-\frac{1}{2\sigma^2}\sum\limits_{t=1}^{N}\sum\limits_{l=0}^{L-1}\parallel\mathbf{e}(t-lT_s)\parallel_2^2
+\end{array}\label{logl}
+\end{equation}
+
+\noindent with $C$ being a constant and
+$\mathbf{e}(t-lT_s)=\mathbf{r}(t-lT_s)-\mathbf{A}_S\bD_T^{l}\bs(t)$.
+
+It can be shown that the CRLB for the parameters of interest
+($\btheta$ and $\bbf$) are
+
+\begin{equation}
+\begin{array}{rcl}
+\mathbf{CRLB}(\mathbf{\theta})&=&{\mathbf{\cal
+P}}^{-1}+{\mathbf{\cal P}}^{-1}{\mathbf{\cal O}}^T[{\mathbf{\cal
+Q}}-{\mathbf{\cal O}}{\mathbf{\cal P}}^{-1}{\mathbf{\cal
+O}}^T]^{-1}{\mathbf{\cal O}}{\mathbf{\cal P}}^{-1}\\
+\mathbf{CRLB}(\mathbf{f})&=&[{\mathbf{\cal Q}}-{\mathbf{\cal
+O}}{\mathbf{\cal P}}^{-1}{\mathbf{\cal O}}^T]^{-1}
+\end{array}\label{CRLBf}
+\end{equation}
+
+\noindent where
+
+\begin{equation}
+\begin{array}{rcl}
+{\mathbf{\cal
+O}}&=&\mathbf{\Lambda}_{\mathbf{f},\mathbf{\theta}}-\sum\limits_{t=1}^{N}\Re\{\mathbf{B}_{\mathbf{f}}^H(t)\mathbf{\Phi
+B}_{\mathbf{\theta}}(t)\}\\ {\mathbf{\cal
+P}}&=&\mathbf{\Lambda}_{\mathbf{\theta}}-\sum\limits_{t=1}^{N}\Re\{\mathbf{B}_{\mathbf{\theta}}^H(t)\mathbf{\Phi
+B}_{\mathbf{\theta}}(t)\}\\
+ {\mathbf{\cal
+Q}}&=&\mathbf{\Lambda}_{\mathbf{f}}-\sum\limits_{t=1}^{N}\Re\{\mathbf{B}_{\mathbf{f}}^H(t)\mathbf{\Phi
+B}_{\mathbf{f}}(t)\}
+\end{array}
+\end{equation}
+
+
+\noindent and the $\bLambda$'s, $\bB$'s and $\mathbf{\Phi}$ are
+defined by
+
+\begin{equation}
+\begin{array}{rcl}
+\mathbf{\Lambda}_{\mathbf{f}}&=&\displaystyle{2\over\sigma^2}\sum\limits_{t=1}^{N}\sum\limits_{l=0}^{L-1}\Re\{\mathbf{S}^H(t)\mathbf{D}_{\mathbf{f}}^{lH}\mathbf{D}_{\mathbf{f}}^{l}\mathbf{S}(t)\}\\
+\mathbf{\Lambda}_{\mathbf{\theta}}&=&\displaystyle{2\over\sigma^2}\sum\limits_{t=1}^{N}\sum\limits_{l=0}^{L-1}\Re\{\mathbf{S}^H(t)\mathbf{D}_{\mathbf{\theta}}^{lH}\mathbf{D}_{\mathbf{\theta}}^{l}\mathbf{S}(t)\}\\
+\mathbf{\Lambda}_{\mathbf{f},
+\mathbf{\theta}}&=&\displaystyle{2\over\sigma^2}\sum\limits_{t=1}^{N}\sum\limits_{l=0}^{L-1}\Re\{\mathbf{S}^H(t)\mathbf{D}_{\mathbf{f}}^{lH}\mathbf{D}_{\mathbf{\theta}}^{l}\mathbf{S}(t)\}
+\end{array}
+\end{equation}
+
+\begin{equation}
+\begin{array}{rcl}
+\matrix{\mathbf{\Phi}&=&\displaystyle{2\over\sigma^2}\sum\limits_{l=0}^{L-1}\bD_T^{lH}\bA_S^H\bA_S\bD_T^{l}}
+\end{array}
+\end{equation}
+
+
+\begin{equation}
+\begin{array}{rcl}
+\matrix{\mathbf{B}_{\mathbf{\theta}}(t)&=&\displaystyle{2\over\sigma^2}\sum\limits_{l=0}^{L-1}\bD_T^{lH}\bA_S^H\mathbf{D}_{\mathbf{\theta}}^{l}\mathbf{S}(t)}\\
+\matrix{\mathbf{B}_{\mathbf{f}}(t)&=&\displaystyle{2\over\sigma^2}\sum\limits_{l=0}^{L-1}\bD_T^{lH}\bA_S^H\mathbf{D}_{\mathbf{f}}^{l}\mathbf{S}(t)}\
+.
+\end{array}
+\end{equation}
+
+
+\section{Computer Simulations}
+
+In this section, computer simulations were carried out to support
+the performance of the proposed algorithms. In the following
+simulations, the emitter signals were generated as constant
+amplitude planewaves with random phase, uniformly distributed on
+[$0$, $2\pi$].  There are four incoming signals,
+$(+30^{\circ},5.5{\rm MHz})$, $(0.0^{\circ},3.5{\rm MHz})$,
+$(-60^{\circ},7.5{\rm MHz})$ and $(+75^{\circ},1.5{\rm MHz})$,
+simultaneously arriving at the array.The MSE of the estimates are
+compared with the CRLB and the approximation analysis in
+(\ref{approx_theta}) and (\ref{approx_f}).
+
+\subsection*{Case 1: Performance versus SNR}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{SF_DOASNR.eps}
+\caption{MSE of DOA estimates versus SNR using one doublet,
+$N$=500, $L$=5, $K$=4.} \label{SF_DOASNR}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{SF_FOASNR.eps}
+\caption{MSE of FOA estimates versus SNR using one doublet,
+$N$=500, $L$=5, $K$=4.} \label{SF_FOASNR}
+\end{center}
+\end{figure}
+
+We assume there are $M=2$ antenna elements in the array receiver,
+while there are $K=4$ incoming signals. $L=5$ and $N=500$. The MSE
+of the DOA/FOA estimation of the signal source ($+30^{\circ}$,
+$5.5MHz$) are calculated and shown in Figs. \ref{SF_DOASNR} and
+\ref{SF_FOASNR}, respectively. The MSE of the estimates are
+steadily decreasing with the increase of SNR. The performance of
+improved algorithms are better than LS-TDE in FOA estimation.
+
+\subsection*{Case 2: Performance versus L}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{SF_DOAL.eps}
+\caption{MSE of DOA estimates versus $L$, $N$=500, $M$=2, $K$=4,
+$SNR$=10dB.} \label{SFDOAL}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{SF_FOAL.eps}
+\caption{MSE of FOA estimates versus $L$, $N$=500, $M$=2, $K$=4,
+$SNR$=10dB.} \label{SFFOAL}
+\end{center}
+\end{figure}
+
+In Figs. \ref{SFDOAL} and \ref{SFFOAL}, we examine the performance
+of all the proposed ESPRIT algorithms with the increase of $L$.
+The performance of DOA/FOA estimation becomes better. One reason
+is that, with the increase of $L$, the estimation of FOA becomes
+better due to more accurate subspace separation.
+
+\subsection*{Case 3: Performance versus M}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{SF_DOAM.eps}
+\caption{MSE of DOA estimates versus $M$, $N$=500, $L$=5, $K$=4,
+$SNR$=10dB.} \label{SFDOAM}
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=3in]{SF_FOAM.eps}
+\caption{MSE of FOA estimates versus $M$, $N$=500, $L$=5, $K$=4,
+$SNR$=10dB.} \label{SFFOAM}
+\end{center}
+\end{figure}
+
+In Figs. \ref{SFDOAM} and \ref{SFFOAM}, we examine the performance
+of all the proposed ESPRIT algorithms with the increase of $M$.
+There is no obvious change of the performance with the increase of
+$M$. One reason is that the increase of $M$ is equivelant to
+increase the sampling number $K$ in Eq. \ref{CorrelationXX}.
+Usually, increasing $M$ cannot significantly improve the
+estimation of DOA/FOA.
+
+\section{Conclusions}
+
+In this paper, we consider a ESPRIT array and extend the classic
+ESPRIT algorithm for DOA/FOA estimation. All the proposed
+algorithms are simple and direct. There are additional pairing
+procedure and the number of the sources being simultaneously
+estimated can be arbitrarily larger than the number of the antenna
+elements to be used. In practice, this is expected to be helpful
+to reduce the hardware investment.
+
+\tiny
+\bibliographystyle{unsrt}
+\bibliography{GlobeCom03Array}
+\end{document}

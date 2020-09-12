@@ -1,0 +1,68 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ghav05}
+M.~Ghavami and B.~(Ben) Allen.
+\newblock {\em Adaptive Array Systems: Fundamentals and Applications}.
+\newblock John Wiley and Sons, 2005.
+
+\bibitem{Dohl07}
+M.~Dohler et~al.
+\newblock Implementable wireless access for b3g networks — part i/ii/iii/iv.
+\newblock {\em IEEE Communication Magazine}, 45(3):85--111, March 2007.
+
+\bibitem{Roy89}
+R.~Roy and T.~Kailath.
+\newblock Esprit-estimation of signal parameter via rotational invariance
+  technique.
+\newblock {\em IEEE Trans. On ASSP}, 37(7):984--995, 1989.
+
+\bibitem{Wong97}
+K.~T. Wong and M.~D. Zoltowski.
+\newblock Closed-form multi-dimensional multi-invarinace esprit.
+\newblock In {\em 1997 IEEE International Conference on Acoustics, Speech, and
+  Signal Processing}, volume~5, pages 3489 --3492, Munich, Germany, Apirl 1997.
+
+\bibitem{Bro98}
+R.~Bro; N.~D. Sidiropoulos and G.~B. Giannakis.
+\newblock Optimal joint azimuth-elevation and signal-array response estimation
+  using parallel factor analysis.
+\newblock In {\em 1998 Conference Record of the Thirty-Second Asilomar
+  Conference on Signals, Systems and Computation}, volume~2, pages 1594 --1598,
+  1998.
+
+\bibitem{Veen92}
+P.~B.~Ober A-J. van~der Veen and E.~F. Deprettere.
+\newblock Azimuth and elevation computation in high resolution doa estimation.
+\newblock {\em IEEE Transactions On Signal Porcessing}, 40(7):1828--1832, July
+  1992.
+
+\bibitem{Kedi96}
+Vikas~S. Kedia and Bindu Chandna.
+\newblock A new algorithm for 2-d doa estimation.
+\newblock {\em Signal Processing}, 60(3):325--332, August 1996.
+
+\bibitem{Goda97}
+Lal~V. Godara.
+\newblock Application of antenna arrays to mobile communications, part ii:
+  Beam-forming and direction-of-arrival considerations.
+\newblock {\em Proceedings of the IEEE}, 85, 1997.
+
+\bibitem{Wang98}
+Xiaodong Wang and H.V. Poor.
+\newblock Blind multiuser detection: A subsequence approach.
+\newblock {\em IEEE Trans. On Information Theory}, 44:677--691, March 1998.
+
+\bibitem{Huff91}
+Sabine~Van Huffel and Joos Vandewalle.
+\newblock {\em The total least squares problem: computational aspects and
+  analysis}.
+\newblock Society for Industrial and Applied Mathematics, 1991.
+
+\bibitem{Rao89}
+Bhaskar~D. Rao and K.~V.~S. Hari.
+\newblock Performance analysis of esprit and tam in determining the direction
+  of arrive of plane waves in noise.
+\newblock {\em IEEE Trans. On Accoustics, Speech, Signal Processing},
+  37(12):1990--1995, December 1989.
+
+\end{thebibliography}
